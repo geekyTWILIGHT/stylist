@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="products_copy.css">
     <title> STylIst </title> 
 </head>
 <body>
@@ -99,7 +99,9 @@
 
         </div>
 
+        <div class="pages">
         <div class="products">
+            <div class="container container1">
             <div class="product product_1_1" id="wpwgv_1_shs_du_m" onclick="productSpecifica()">
                 <img src="necessary_images/shs_white_polo_with_grey_vest_du_m.jpg" alt="Product Image" id="product_image">
                 <div class="product_info">
@@ -225,6 +227,9 @@
                 </div>
             </div>
 
+            </div>
+            <div class="container container2">
+
             <div class="product product_5_2" id="p_5_ictne_du_m" onclick="productSpecifica()">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
@@ -338,6 +343,9 @@
                     </div>
                 </div>
             </div>
+
+            </div>
+            <div class="container container3">
 
             <div class="product product_7n8_1" id="b_7n8_bm_du_u" onclick="productSpecifica()">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
@@ -458,6 +466,9 @@
                 </div>
             </div>
 
+            </div>
+            <div class="container container4">
+
             <div class="product product_11_4" id="cp_11_hm_ku_u" onclick="productSpecifica()">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
@@ -572,6 +583,9 @@
                 </div>
             </div>
 
+            </div>
+            <div class="container container5">
+
             <div class="product product_17_1" id="b_17_tm_du_f" onclick="productSpecifica()">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
@@ -682,6 +696,9 @@
                 </div>
             </div>
 
+            </div>
+            <div class="container container6">
+
             <div class="product product_19_1" id="bs_19_ans_du_f" onclick="productSpecifica()">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
@@ -729,6 +746,13 @@
                     </div>
                 </div>
             </div>
+            </div>
+        </div>
+        <div class="page_buttons">
+            <button class="page_button previous_button" onclick="previousPage()">‹</button>
+            <span class="page_number">  1 </span>
+            <button class="page_button next_button" onclick="nextPage()">›</button>
+        </div>
         </div>
     </div>
 
@@ -1068,6 +1092,51 @@ function uncheckAll() {
     }
 }
 
+
+let current_page = 0;
+const page_collection = document.querySelector('.products');
+const pages = document.querySelectorAll('.container');
+const pages_width = pages[0].clientHeight;
+const total_pages = pages.length;
+
+function showPage(index) {
+    if (index < 0) {
+        index = 0;
+    }
+    else if (index >= total_pages) {
+        index = total_pages - 1;
+    }
+
+    current_page = index;
+    page_collection.style.transform = `translateX(-${index * 100}%)`;
+    updateButtonStates();
+    updatePageIndex();
+}
+
+function previousPage() {
+    showPage(current_page - 1);
+}
+
+function nextPage() {
+    showPage(current_page + 1);
+}
+
+function updateButtonStates() {
+    const left_button = document.querySelector('.previous_button');
+    const right_button = document.querySelector('.next_button');
+
+
+    left_button.classList.toggle('unclickable', current_page === 0);
+    right_button.classList.toggle('unclickable', current_page === total_pages - 1);
+}
+
+function updatePageIndex() {
+    const page_collections = document.querySelector('.page_number');
+    page_collections.textContent = current_page + 1;
+}
+
+updateButtonStates();
+updatePageIndex();
 
 </script>
 
