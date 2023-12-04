@@ -308,4 +308,5 @@
 .sidenav_n_content > .pages > .page_buttons > .page_button {
     width: 27.5%;
     height: 25%;
+    cursor: pointer;
 }
