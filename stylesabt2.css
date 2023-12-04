@@ -1,0 +1,111 @@
+body {
+    background-color: #f2f2f0;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+    
+.navbar .logo {
+    padding-top: 1%;
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans', 'Regular';
+    font-size: 18px;
+    margin-right: auto; /* Pushes the logo (image) to the left. */
+}
+    
+.navbar a {
+    padding-top: 2%;
+    text-decoration: none;
+    color: #050778;
+    font-family: 'Open Sans', 'Regular';
+    font-size: 18px;
+    margin-left: 75px;
+    transition: 0.3s ease-in-out;
+}
+    
+.navbar .logo img {
+    width: 90px;
+}
+    
+.navbar a:hover {
+   color: #edb51a;
+}
+
+.memberlist {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 24px;
+}
+
+.memberlist > .membersName {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    cursor: default;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+}
+.memberlist > .membersName > #name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 20rem;
+    height: 23rem;
+    background-color: #e2e2e2; 
+    border: .2rem solid #edb51a;
+    margin-bottom: 1.8rem;
+    padding: .6rem;
+}
+.memberlist > .membersName > #name > p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+.memberlist > .membersName > #name > img {
+    width: 300px;
+    height: 325px;
+}
+.memberlist > .membersName > #name > #kerby {
+    width: 17rem;
+    height: 20rem;
+}
+.memberlist > .membersName > #name > #tyrese {
+    width: 18rem;
+    height: 20rem;
+}
+.memberlist > .membersName > #name > #raven {
+    width: 19rem;
+    height: 20rem;
+}
+.memberlist > .membersName > #name > #mark {
+    width: 19rem;
+    height: 20rem;
+}
+.memberlist > .membersName > #name > #jairus {
+    width: 12rem;
+    height: 20rem;
+}
+.memberlist > .membersName > #name > #billy {
+    width: 17rem;
+    height: 20rem;
+}
+.memberlist > .membersName > #name > #richard {
+    width: 15rem;
+    height: 20rem;
+    object-fit: cover;
+}
+.memberlist > .membersName > #name > a {
+    text-decoration: none;
+    font-size: 1rem;
+}

@@ -1,0 +1,260 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+
+.navbar .logo {
+    padding-top: 1%;
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans', 'Regular';
+    font-size: 18px;
+    margin-right: auto; /* Pushes the logo (image) to the left. */
+}
+
+.navbar a {
+    padding-top: 2%;
+    text-decoration: none;
+    color: #050778;
+    font-family: 'Open Sans', 'Regular';
+    font-size: 18px;
+    margin-left: 75px;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar .logo img {
+    width: 90px;
+}
+
+.navbar a:hover {
+    color: #edb51a;
+}
+
+.specific_product {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 1000px;
+    margin-left: 2.5%;
+    margin-top: 3%;
+    background-color: #f2f2f0;
+    padding-top: 2%;
+}
+
+.specific_product > #product_image {
+    width: 53%;
+    height: 75%;
+    background-color: #050778;
+    margin-right: 7%;
+    margin-left: 3%;
+}
+
+.specific_product > .product_content {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.specific_product > .product_content > #product_sim_image {
+    width: 96%;
+    height: 240px;
+}
+
+.specific_product > .product_content > #product_specific_name {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.specific_product > .product_content > .rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.specific_product > .product_content > .rating > #star_rate {
+    font-size: 16px;
+    color: #edb51a;
+    font-family: 'Roboto', sans-serif;
+}
+
+.specific_product > .product_content > .rating > #reviews {
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0.5%;
+    color: #48453c;
+}
+
+.specific_product > .product_content > #products_updating_price {
+    font-size: 19px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    color: #48453c;
+    /* font-weight: 600; */
+    /* color: #ef612e; */
+}
+
+.specific_product > .product_content > #hr_after_price {
+    width: 96%;
+    color: #8c8c8e;
+    margin-right: 4%;
+}
+
+.specific_product > .product_content > .size_title_n_chart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+}
+
+.specific_product > .product_content > .size_title_n_chart > .changing_size {
+    display: flex;
+    flex-direction: row;
+}
+
+.specific_product > .product_content > .size_title_n_chart > .changing_size > #size_title {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    margin-right: 10%;
+    color: #48453c;
+}
+
+.specific_product > .product_content > .size_title_n_chart > .changing_size > #changing_size_value {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    color: #050778;
+    /* color: #48453c; */
+}
+
+.specific_product > .product_content > .size_title_n_chart > #size_chart_button {
+    color: #050778;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.specific_product > .product_content > .size_title_n_chart > #size_chart_button:hover {
+    color: #edb51a;
+}
+
+.specific_product > .product_content > .quantity_func {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 20%;
+    margin-left: 38%;
+}
+
+.specific_product > .product_content > .quantity_func > .quantity_button {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 0.5px solid #8c8c8e;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.specific_product > .product_content > .quantity_func > .quantity_button:hover {
+    background-color: #dcdcdc;
+}
+
+.specific_product > .product_content > .center_hr {
+    display: flex;
+    justify-content: center;
+    width: 96%;
+}
+
+.specific_product > .product_content > .center_hr > #hr_before_size_option {
+    width: 50%;
+    margin-bottom: 4%;
+} 
+
+.specific_product > .product_content > .center_size_option {
+    display: flex;
+    width: 96%;
+    justify-content: center;
+}
+
+.specific_product > .product_content > .center_size_option > .sizes_option {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 72%;
+}
+
+.specific_product > .product_content > .center_size_option > .sizes_option > .size {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.specific_product > .product_content > .center_size_option > .sizes_option > .size:hover {
+    background-color: #dcdcdc;
+}
+
+.specific_product > .product_content > .center_add_to_cart_button {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.specific_product > .product_content > .center_add_to_cart_button > #add_to_cart_button {
+    width: 96%;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #edb51a;
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    margin-top: 4%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.specific_product > .product_content > .center_add_to_cart_button > #add_to_cart_button:hover {
+    background-color:  #a67f12;
+}
+
+.specific_product > .product_content > .center_add_to_cart_button > #buy_now_button {
+    width: 96%;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #050778;
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    margin-top: 4%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.specific_product > .product_content > .center_add_to_cart_button > #buy_now_button:hover {
+    background-color: #040504;
+}
+
+/* Previous Font for others: font-family: 'Roboto', sans-serif; */
+/* Previous Font for product name: font-family: 'PT Serif', serif; */

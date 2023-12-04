@@ -1,0 +1,261 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+}
+
+.navbar .logo {
+    padding-top: 1%;
+    text-decoration: none;
+    color: black;
+    font-family: 'Open Sans', 'Regular';
+    font-size: 18px;
+    margin-right: auto; /* Pushes the logo (image) to the left. */
+}
+
+.navbar a {
+    padding-top: 2%;
+    text-decoration: none;
+    color: #050778;
+    font-family: 'Open Sans', 'Regular';
+    font-size: 18px;
+    margin-left: 75px;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar .logo img {
+    width: 90px;
+}
+
+.navbar a:hover {
+    color: #edb51a;
+}
+
+.sidenav_n_content {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.sidenav_n_content > .side_nav_bar {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+    width: 22.5%;
+}
+
+.sidenav_n_content > .side_nav_bar > #sort_by_title {
+    font-size: 13px;
+    margin-bottom: 9%;
+}
+
+.sidenav_n_content > .side_nav_bar > .sort_by_options {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav_n_content > .side_nav_bar > .sort_by_options > a {
+    text-decoration: none;
+    color: #8c8c8e;
+    font-size: 15px;
+    margin-bottom: 2%;
+}
+
+.sidenav_n_content > .side_nav_bar > .sort_by_options > a:last-child {
+    margin-bottom: 0;
+}
+
+.sidenav_n_content > .side_nav_bar > .sort_by_options > a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.sidenav_n_content > .side_nav_bar > .filter_n_clear {
+    display: flex;
+    flex-direction: row;
+    margin-top: 16%;
+}
+
+.sidenav_n_content > .side_nav_bar > .filter_n_clear > #filter_title {
+    font-size: 13px;
+}
+
+.sidenav_n_content > .side_nav_bar > .filter_n_clear > #clear_filter {
+    color: #8c8c8e;
+    font-size: 13px;
+    text-decoration: underline;
+    margin-top: 4.5%;
+    margin-left: 66%;
+    display: none;
+    cursor: pointer;
+}
+
+.sidenav_n_content > .side_nav_bar > hr {
+    width: 90%;
+    position: relative;
+    left: -5%;
+}
+
+.sidenav_n_content > .side_nav_bar > .grade_level,
+.sidenav_n_content > .side_nav_bar > .uniform_type,
+.sidenav_n_content > .side_nav_bar > .course,
+.sidenav_n_content > .side_nav_bar > .sex {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav_n_content > .side_nav_bar > .grade_level > #grade_level_title,
+.sidenav_n_content > .side_nav_bar > .uniform_type > #uniform_type_title,
+.sidenav_n_content > .side_nav_bar > .course > #course_title,
+.sidenav_n_content > .side_nav_bar > .sex > #sex {
+    font-size: 15px;
+    background-color: white;
+    cursor: pointer;
+    text-align: left;
+    border: none;
+    margin-left: -2%;
+    font-weight: 550;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.sidenav_n_content > .side_nav_bar > .grade_level > .grade_level_selection,
+.sidenav_n_content > .side_nav_bar > .uniform_type > .uniform_type_selection,
+.sidenav_n_content > .side_nav_bar > .course > .course_selection,
+.sidenav_n_content > .side_nav_bar > .sex > .sex_selection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.sidenav_n_content > .side_nav_bar > .grade_level > .grade_level_selection > input,
+.sidenav_n_content > .side_nav_bar > .uniform_type > .uniform_type_selection > input,
+.sidenav_n_content > .side_nav_bar > .course > .course_selection > input,
+.sidenav_n_content > .side_nav_bar > .sex > .sex_selection > input {
+    margin-right: 95%;
+    width: 17.5px;
+    height: 17.5px;
+}
+
+.sidenav_n_content > .side_nav_bar > .grade_level > .grade_level_selection > label {
+    font-size: 15px;
+    font-weight: 50;
+    position: relative;
+    left: 10%;
+    top: -24%;
+}
+
+.sidenav_n_content > .side_nav_bar > .uniform_type > .uniform_type_selection > label {
+    font-size: 15px;
+    font-weight: 50;
+    position: relative;
+    left: 10%;
+    top: -16%;
+}
+
+.sidenav_n_content > .side_nav_bar > .course > .course_selection > label {
+    font-size: 15px;
+    font-weight: 50;
+    position: relative;
+    left: 10%;
+    top: -8%;
+}
+
+.sidenav_n_content > .side_nav_bar > .sex > .sex_selection > label {
+    font-size: 15px;
+    font-weight: 50;
+    position: relative;
+    left: 10%;
+    top: -16%;
+}
+
+.sidenav_n_content > .side_nav_bar > .grade_level > .selection,
+.sidenav_n_content > .side_nav_bar > .uniform_type > .selection,
+.sidenav_n_content > .side_nav_bar > .course > .selection,
+.sidenav_n_content > .side_nav_bar > .sex > .selection {
+    display: none; 
+}
+
+.sidenav_n_content > .products {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 3%;
+    margin-right: 0;
+}
+
+.sidenav_n_content > .products > .product {
+    width: 340px;
+    /* height: 520px; */
+    /* height: 460px; */
+    height: 450px;
+    margin-right: 2%;
+    padding: 6px;
+    margin-bottom: 3%;
+    transition: 0.3s ease-in-out;
+    background-color: #f5f5f5;
+    border-radius: 2%;
+    cursor: pointer;
+}
+
+.sidenav_n_content > .products > .product:hover {
+    box-shadow: 3px 5px 3px #bfbfbf, -2px -2px 3px #bfbfbf;
+}
+
+.sidenav_n_content > .products > .product > img {
+    width: 96.47%;
+    height: 348px;
+    margin-left: 6px;
+    margin-top: 6px;
+    /* height: 430px; */
+}
+
+.sidenav_n_content > .products > .product > .product_info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+
+.sidenav_n_content > .products > .product > .product_info > #product_name {
+    font-size: 14px;
+    width: 96.47%;
+    height: 35px;
+    margin-top: 3%;
+}
+
+.sidenav_n_content > .products > .product > .product_info > #product_price {
+    font-size: 15px;
+    color: #ef612e;
+    font-weight: lighter;
+    margin-top: -2.5%;
+    margin-bottom: 3%;
+    width: 96.47%;
+    height: 10px;
+}
+
+.sidenav_n_content > .products > .product > .product_info > .reviews {
+    display: flex;
+    flex-direction: row;
+    width: 96.47%;
+    height: 10px; 
+}
+
+.sidenav_n_content > .products > .product > .product_info > .reviews > #rating {
+    font-size: 15px;
+    /* color: #ef612e; */
+    color: #edb51a;
+    margin-right: 1%;
+}
+
+.sidenav_n_content > .products > .product > .product_info > .reviews > #bought {
+    font-size: 14px;
+    /* color: #8c8c8e; */
+    color: #48453c;
+}
+
+

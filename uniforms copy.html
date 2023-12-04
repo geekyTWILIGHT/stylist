@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="products_copy.css">
+    <title> STylIst </title> 
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo"><img src="important_images/stilogo.png" alt="STI Logo"></a>
+            <a href="uniforms.html">Uniforms</a>
+            <a href="about2.html">About</a>
+        </div>
+    </header>
+
+    <div class="sidenav_n_content">
+        <div class="side_nav_bar">
+            <h3 id="sort_by_title"> SORT BY </h3>
+            <div class="sort_by_options">
+                <a href="unkown.html" id="best_sellers"> Best Sellers </a>
+                <a href="unkown.html" id="latest"> Latest </a>
+                <a href="unkown.html" id="price_low_to_high"> Price $ - $$ </a>
+                <a href="unkown.html" id="price_high_to_low"> Price $$ - $ </a> 
+            </div>
+            
+            <div class="filter_n_clear">
+                <h3 id="filter_title"> FILTER </h3>
+                <a id="clear_filter" onclick="uncheckAll()"> Clear All </a>
+            </div>
+
+            <hr>
+
+            <form class="grade_level" action=""> 
+                <button id="grade_level_title" type="button" onclick="gradeLvlSelec()"> Grade Level </button>
+                <div class="grade_level_selection selection" id="grade_level_selection">
+                    <input type="checkbox" name="shs" id="shs_grade_level" class="checkedbox" onclick="filterVisibility()" value="shs_uniform">
+                        <label for="shs_grade_level"> Senior High School </label>
+                    <input type="checkbox" name="college" id="college_grade_level" class="checkedbox" value="college_uniform">
+                        <label for="college_grade_level"> College </label>  
+                </div>
+            </form>
+
+            <hr> 
+
+            <form class="uniform_type" action="">
+                <button id="uniform_type_title" type="button" onclick="unifTypeSelec()"> Uniform Type </button>
+                <div class="uniform_type_selection selection" id="uniform_type_selection">
+                    <input type="checkbox" name="daily_uniform" id="daily_uniform_type" class="checkedbox" value="daily_uniform_type">
+                        <label for="casual_uniform_type"> Daily Uniform </label>
+                    <input type="checkbox" name="kitchen_uniform" id="kitchen_uniform_type" class="checkedbox" value="kitchen_uniform_type">
+                        <label for="pe_uniform_type"> Kitchen Uniform </label>
+                    <input type="checkbox" name="fnb_uniform" id="fnb_uniform_type" class="checkedbox" value="fnb_uniform_type">
+                        <label for="pe_uniform_type"> Food & Beverage (F&B) Uniform </label>
+                </div>
+            </form>
+
+            <hr> 
+
+            <form class="course">
+                <button id="course_title" type="button" onclick="courseSelec()"> Program </button>
+                <div class="course_selection selection" id="course_selection"> 
+                    <input type="checkbox" name="ict_course" id="ict_course" class="checkedbox" value="">
+                        <label for="ict_course"> Information & Communications Technology </label>
+                    <input type="checkbox" name="bm_course" id="bm_course" class="checkedbox" value="">
+                        <label for="bm_course"> Business & Management </label>
+                    <input type="checkbox" name="hm_course" id="hm_course" class="checkedbox" value="">
+                        <label for="hm_course"> Hospitality Management </label>
+                    <input type="checkbox" name="tm_course" id="tm_course" class="checkedbox" value="">
+                        <label for="tm_course"> Tourism Management </label>
+                    <input type="checkbox" name="engineering_course" id="engineering_course" class="checkedbox" value="">
+                        <label for="engineering_course"> Engineering </label>
+                    <input type="checkbox" name="as_course" id="as_course" class="checkedbox" value="">
+                        <label for="as_course"> Arts & Sciences </label>
+                </div>
+            </form>
+
+            <hr>
+
+            <form class="sex">
+                <button id="sex" type="button" onclick="sexSelec()"> Sex </button>
+                <div class="sex_selection selection" id="sex_selection">
+                    <input type="checkbox" name="male" id="male" class="checkedbox"value=""> 
+                        <label for="male"> Male </label>
+                    <input type="checkbox" name="female" id="female" class="checkedbox"value="">
+                        <label for="female"> Female </label>
+                    <input type="checkbox" name="unisex" id="unisex" class="checkedbox" value="">
+                        <label for="unisex"> Unisex </label>
+                </div>
+            </form>  
+
+            <hr>
+
+        </div>
+
+        <div class="pages">
+        <div class="products">
+            <div class="container container1">
+            <div class="product product_1_1" id="wpwgv_1_shs_du_m" onclick="productSpecifica()">
+                <img src="necessary_images/shs_white_polo_with_grey_vest_du_m.jpg" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> White Polo with Grey Vest (Senior High School - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_1_2" id="dbs_1_shs_du_m" onclick="productSpecifica()">
+                <img src="necessary_images/shs_dark_blue_slacks_du_m.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Dark Blue Slacks (Senior High School - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_2_1" id="wbwgv_2_shs_du_f" onclick="productSpecifica()">
+                <img src="necessary_images/shs_white_blouse_with_grey_vest_du_f.jpg" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> White Blouse with Grey Vest (Senior High School - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_2_2" id="dbpcs_2_shs_du_f" onclick="productSpecifica()">
+                <img src="necessary_images/shs_dark_pencil_cut_skirt_du_f.jpg" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Dark Blue Pencil-Cut Skirt [2 Inches Above the Knee Cap] (Senior High School - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_1n2_1" id="n_1n2_shs_du_u" onclick="productSpecifica()">
+                <img src="necessary_images/shs_necktie_du_u.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Necktie (Senior High School - Unisex) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_3_1" id="cb_3_shs_ku_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Checkered Beanie (SHS Culinary Art Strand Exclusive - Unisex) (Kitchen Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_3_2" id="wcp_3_shs_ku_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> White Chef's Polo (SHS Culinary Art Strand Exclusive - Unisex) (Kitchen Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_3_3" id="cp_3_shs_ku_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Checkered Pants (SHS Culinary Art Strand Exclusive - Unisex) (Kitchen Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note: Include the "White Clogs" in SHS Kitchen Uniform if it is provided by STI -->
+
+
+            <!--If SHS PE uniforms are decided to be included then include this in the code: -->
+
+            <!-- <div class="product product_4_1" id="peu_4_shs_su_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Physical Education (Senior High School - Unisex) (Sports Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="product product_5_1" id="gpwtfs_5_ictne_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Gray Polo with 3/4 Sleeves (ICT & Engineering - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <div class="container container2">
+
+            <div class="product product_5_2" id="p_5_ictne_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Pants (ICT & Engineering - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_6_1" id="gbwtfs_6_ictne_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Gray Blouse with 3/4 Sleeves (ICT & Engineering - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_6_2" id="sop_6_ictne_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Skirt or Pants (ICT & Engineering - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_7_1" id="blsp_7_bm_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Blue Long Sleeve Polo (Business & Management - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_7_2" id="rn_7_bm_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Red Necktie (Business & Management - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note: The "Pants (Business & Management - Male) (Daily Uniform)" may not be included in the final output as it 
+                looks similar to "Pants (ICT & Engineering - Male) (Daily Uniform)" -->
+
+            <div class="product product_7_3" id="p_7_bm_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Pants (Business & Management - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_8_1" id="rs_8_bm_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Red Scarf (Business & Management - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_8_2" id="blsb_8_bm_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Blue Long Sleeve Blouse (Business & Management - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note: The "Skirt or Pants (Business & Management - Female) (Daily Uniform)" may not be included in the final output 
+                as it looks similar to "Skirt or Pants (ICT & Engineering - Female) (Daily Uniform)" -->
+
+            <div class="product product_8_3" id="sop_8_bm_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Skirt or Pants (Business & Management - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <div class="container container3">
+
+            <div class="product product_7n8_1" id="b_7n8_bm_du_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Blazer (Business & Management - Unisex) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_9_1" id="wlsp_9_hm_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> White Long Sleeve Polo (Hospitality Management - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note: The "Pants (Hospitality Management - Male) (Daily Uniform)" may not be included in the final output as it 
+                looks similar to "Pants (ICT & Engineering - Male) (Daily Uniform) and Pants (Business & Management - Male) 
+                (Daily Uniform)" -->
+
+            <div class="product product_9_2" id="p_9_hm_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Pants (Hospitality Management - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_10_1" id="wlsb_10_hm_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> White Long Sleeve Blouse (Hospitality Management - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note: The "Skirt or Pants (Hospitality Management- Female) (Daily Uniform)" may not be included in the final output 
+                as it looks similar to "Skirt or Pants (ICT & Engineering - Female) (Daily Uniform) and Pants 
+                (Business & Management - Female) (Daily Uniform)" -->
+
+            <div class="product product_10_2" id="sop_10_hm_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Skirt or Pants (Hospitality Management - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note: The "Blazer (Hospitality Management - Unisex) (Daily Uniform)" may not be included in the final output
+                as it looks similar to "Blazer (Business & Management - Unisex) (Daily Uniform)"-->
+
+            <div class="product product_9n10_1" id="b_9n10_hm_du_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Blazer (Hospitality Management - Unisex) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_11_1" id="gscwhn_11_hm_ku_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Gray Skull Cap with Hair Net (Hospitality Management - Unisex) (Kitchen Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_11_2" id="gcp_11_hm_ku_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Gray Chef's Polo (Hospitality Management - Unisex) (Kitchen Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_11_3" id="a_11_hm_ku_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Apron (Hospitality Management - Unisex) (Kitchen Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <div class="container container4">
+
+            <div class="product product_11_4" id="cp_11_hm_ku_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Chef's Pants (Hospitality Management - Unisex) (Kitchen Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note: Include the "White Shoes" in Hospitality Management Kitchen Uniform (Unisex) if it is provided by STI -->
+            <!-- Note: Add the "product_12..." if gender variety in "Hospitality Management Kitchen Uniforms" are needed-->
+
+            <!-- "White Long Sleeve Polo (Hospitality Management - Male) (F&B Uniform)" looks similar to 
+                "White Long Sleeve Polo (Hospitality Management - Male) (Daily Uniform)"-->
+
+            <div class="product product_14_1" id="wlsp_14_hm_fnbu_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> White Long Sleeve Polo (Hospitality Management - Male) (F&B Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_14_2" id="p_14_hm_fnbu_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Pants (Hospitality Management - Male) (F&B Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_15_1" id="wlsb_15_hm_fnbu_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> White Long Sleeve Blouse (Hospitality Management - Female) (F&B Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_15_2" id="sop_15_hm_fnbu_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Skirt or Pants (Hospitality Management - Female) (F&B Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_14n15_1" id="v_14n15_hm_fnbu_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Vest (Hospitality Management - Unisex) (F&B Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_16_1" id="wp_16_tm_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> White Polo (Tourism Management - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_16_2" id="yn_16_tm_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Yellow Necktie (Tourism Management - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_16_3" id="gp_16_tm_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Gray Pants (Tourism Management - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <div class="container container5">
+
+            <div class="product product_17_1" id="b_17_tm_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Beret (Tourism Management - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_17_2" id="wb_17_tm_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> White Blouse (Tourism Management - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_17_3" id="ys_17_tm_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Yellow Scarf (Tourism Management - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_17_4" id="gs_17_tm_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Gray Skirt (Tourism Management - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Note: Include "Skin-Toned Stockings" in "Tourism Management - Female" if it is provided by STI -->
+
+            <div class="product product_16n17_1" id="tp_16n17_tm_du_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Tourism Pin (Tourism Management - Unisex) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_16n17_2" id="tb_16n17_tm_du_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Tourism Blazer (Tourism Management - Unisex) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_18_1" id="blsp_18_ans_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Blue Long Sleeve Polo (Arts & Sciences - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_18_2" id="bn_18_ans_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Blue Necktie (Arts & Sciences - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_18_3" id="p_18_ans_du_m" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Pants (Arts & Sciences - Male) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            </div>
+            <div class="container container6">
+
+            <div class="product product_19_1" id="bs_19_ans_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Blue Scarf (Arts & Sciences - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_19_2" id="blsb_19_ans_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Blue Long Sleeve Blouse (Arts & Sciences - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_19_3" id="sop_19_ans_du_f" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Skirt or Pants (Arts & Sciences - Female) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product product_20_1" id="b_20_ans_du_u" onclick="productSpecifica()">
+                <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
+                <div class="product_info">
+                    <h3 id="product_name"> Blazer (Arts & Sciences - Unisex) (Daily Uniform) </h3>
+                    <h3 id="product_price"> ₱1,700 </h3>
+                    <div class="reviews">
+                        <span id="rating"> *Rating* </span> 
+                        <span id="bought"> (309) </span>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="page_buttons">
+            <button class="page_button previous_button" onclick="previousPage()">‹</button>
+            <span class="page_number">  1 </span>
+            <button class="page_button next_button" onclick="nextPage()">›</button>
+        </div>
+        </div>
+    </div>
+
+<script>
+function gradeLvlSelec() {
+    let gradeLvlBtn = document.getElementById('grade_level_selection');
+
+    if (gradeLvlBtn.style.display === "none") {
+        gradeLvlBtn.style.display = "flex";
+    }
+    else {
+        gradeLvlBtn.style.display = "none";
+    }
+}
+
+function unifTypeSelec() {
+    let unifTypeBtn = document.getElementById('uniform_type_selection');
+
+    if (unifTypeBtn.style.display === "none") {
+        unifTypeBtn.style.display = "flex";
+    }
+    else {
+        unifTypeBtn.style.display = "none";
+    }
+}
+
+function courseSelec() {
+    let courseBtn = document.getElementById('course_selection');
+
+    if (courseBtn.style.display === "none") {
+        courseBtn.style.display = "flex";
+    }
+    else {
+        courseBtn.style.display = "none";
+    }
+}
+
+function sexSelec() {
+    let sexBtn = document.getElementById('sex_selection');
+
+    if (sexBtn.style.display === "none") {
+        sexBtn.style.display = "flex";
+    }
+    else {
+        sexBtn.style.display = "none";
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    function productSpecifica() {
+
+        // Name: (Uniform Name) (Product Type Number) (Grade Level or Course) (Uniform Type) (Uniform Sex Type) 
+        const redirect_wpwgv_1_shs_du_m = document.getElementById('wpwgv_1_shs_du_m');
+        const redirect_dbs_1_shs_du_m = document.getElementById('dbs_1_shs_du_m');
+
+        const redirect_wbwgv_2_shs_du_f = document.getElementById('wbwgv_2_shs_du_f');
+        const redirect_dbpcs_2_shs_du_f = document.getElementById('dbpcs_2_shs_du_f');
+
+        const redirect_n_1n2_shs_du_u = document.getElementById('n_1n2_shs_du_u');
+
+        const redirect_cb_3_shs_ku_u = document.getElementById('cb_3_shs_ku_u');
+        const redirect_wcp_3_shs_ku_u = document.getElementById('wcp_3_shs_ku_u');
+        const redirect_cp_3_shs_ku_u = document.getElementById('cp_3_shs_ku_u');
+
+        const redirect_gpwtfs_5_ictne_du_m = document.getElementById('gpwtfs_5_ictne_du_m');
+        const redirect_p_5_ictne_du_m = document.getElementById('p_5_ictne_du_m');
+        
+        const redirect_gbwtfs_6_ictne_du_f = document.getElementById('gbwtfs_6_ictne_du_f');
+        const redirect_sop_6_ictne_du_f = document.getElementById('sop_6_ictne_du_f');
+
+        const redirect_blsp_7_bm_du_m = document.getElementById('blsp_7_bm_du_m');
+        const redirect_rn_7_bm_du_m = document.getElementById('rn_7_bm_du_m');
+        const redirect_p_7_bm_du_m = document.getElementById('p_7_bm_du_m');
+
+        const redirect_rs_8_bm_du_f = document.getElementById('rs_8_bm_du_f');
+        const redirect_blsb_8_bm_du_f = document.getElementById('blsb_8_bm_du_f');
+        const redirect_sop_8_bm_du_f = document.getElementById('sop_8_bm_du_f');
+
+        const redirect_b_7n8_bm_du_u = document.getElementById('b_7n8_bm_du_u');
+
+        const redirect_wlsp_9_hm_du_m = document.getElementById('wlsp_9_hm_du_m');
+        const redirect_p_9_hm_du_m = document.getElementById('p_9_hm_du_m');
+
+        const redirect_wlsb_10_hm_du_f = document.getElementById('wlsb_10_hm_du_f');
+        const redirect_sop_10_hm_du_f = document.getElementById('sop_10_hm_du_f');
+
+        const redirect_b_9n10_hm_du_u = document.getElementById('b_9n10_hm_du_u');
+
+        const redirect_gscwhn_11_hm_ku_u = document.getElementById('gscwhn_11_hm_ku_u');
+        const redirect_gcp_11_hm_ku_u = document.getElementById('gcp_11_hm_ku_u');
+        const redirect_a_11_hm_ku_u = document.getElementById('a_11_hm_ku_u');
+        const redirect_cp_11_hm_ku_u = document.getElementById('cp_11_hm_ku_u');
+
+        const redirect_wlsp_14_hm_fnbu_m = document.getElementById('wlsp_14_hm_fnbu_m');
+        const redirect_p_14_hm_fnbu_m = document.getElementById('p_14_hm_fnbu_m');
+
+        const redirect_wlsb_15_hm_fnbu_f = document.getElementById('wlsb_15_hm_fnbu_f');
+        const redirect_sop_15_hm_fnbu_f = document.getElementById('sop_15_hm_fnbu_f');
+
+        const redirect_v_14n15_hm_fnbu_u = document.getElementById('v_14n15_hm_fnbu_u');
+
+        const redirect_wp_16_tm_du_m = document.getElementById('wp_16_tm_du_m');
+        const redirect_yn_16_tm_du_m = document.getElementById('yn_16_tm_du_m');
+        const redirect_gp_16_tm_du_m = document.getElementById('gp_16_tm_du_m');
+
+        const redirect_b_17_tm_du_f = document.getElementById('b_17_tm_du_f');
+        const redirect_wb_17_tm_du_f = document.getElementById('wb_17_tm_du_f');
+        const redirect_ys_17_tm_du_f = document.getElementById('ys_17_tm_du_f');
+        const redirect_gs_17_tm_du_f = document.getElementById('gs_17_tm_du_f');
+
+        const redirect_tp_16n17_tm_du_u = document.getElementById('tp_16n17_tm_du_u');
+        const redirect_tb_16n17_tm_du_u = document.getElementById('tb_16n17_tm_du_u');
+
+        const redirect_blsp_18_ans_du_m = document.getElementById('blsp_18_ans_du_m');
+        const redirect_bn_18_ans_du_m = document.getElementById('bn_18_ans_du_m');
+        const redirect_p_18_ans_du_m = document.getElementById('p_18_ans_du_m');
+
+        const redirect_bs_19_ans_du_f = document.getElementById('bs_19_ans_du_f');
+        const redirect_blsb_19_ans_du_f = document.getElementById('blsb_19_ans_du_f');
+        const redirect_sop_19_ans_du_f = document.getElementById('sop_19_ans_du_f');
+
+        const redirect_b_20_ans_du_u = document.getElementById('b_20_ans_du_u');
+
+        redirect_wpwgv_1_shs_du_m.addEventListener('click', function () {
+            window.location.href = 'senior_high_school__daily_uniform__male__white_polo_with_grey_vest.html';
+        });
+        redirect_dbs_1_shs_du_m.addEventListener('click', function () {
+            window.location.href = 'senior_high_school__daily_uniform__male__dark_blue_slacks.html';
+        });
+
+        redirect_wbwgv_2_shs_du_f.addEventListener('click', function () {
+            window.location.href = 'senior_high_school__daily_uniform__female__white_blouse_with_grey_vest.html';
+        });
+        redirect_dbpcs_2_shs_du_f.addEventListener('click', function () {
+            window.location.href = 'senior_high_school__daily_uniform__female__dark_blue_pencil_cut_skirt.html';
+        });
+
+        redirect_n_1n2_shs_du_u.addEventListener('click', function () {
+            window.location.href = 'senior_high_school__daily_uniform__unisex__necktie.html';
+        });
+
+        redirect_cb_3_shs_ku_u.addEventListener('click', function () {
+            window.location.href = 'senior_high_school__kitchen_uniform__unisex__checkered_beanie.html';
+        });
+        redirect_wcp_3_shs_ku_u.addEventListener('click', function () {
+            window.location.href = 'senior_high_school__kitchen_uniform__unisex__white_chefs_polo.html';
+        });
+        redirect_cp_3_shs_ku_u.addEventListener('click', function () {
+            window.location.href = 'senior_high_school__kitchen_uniform__unisex__checkered_pants.html';
+        });
+
+        redirect_gpwtfs_5_ictne_du_m.addEventListener('click', function () {
+            window.location.href = 'information_and_communications_technology_and_engineering__daily_uniform__male__gray_polo_with_three_fourth_sleeves.html';
+        });
+        redirect_p_5_ictne_du_m.addEventListener('click', function () {
+            window.location.href = 'information_and_communications_technology_and_engineering__daily_uniform__male__pants.html';
+        });
+
+        redirect_gbwtfs_6_ictne_du_f.addEventListener('click', function () {
+            window.location.href = 'information_and_communications_technology_and_engineering__daily_uniform__female__gray_blouse_with_three_fourth_sleeves.html';
+        });
+        redirect_sop_6_ictne_du_f.addEventListener('click', function () {
+            window.location.href = 'information_and_communications_technology_and_engineering__daily_uniform__female__skirt_or_pants.html';
+        });
+
+        redirect_blsp_7_bm_du_m.addEventListener('click', function () {
+            window.location.href = 'business_and_management__daily_uniform__male__blue_long_sleeve_polo.html';
+        });
+        redirect_rn_7_bm_du_m.addEventListener('click', function () {
+            window.location.href = 'business_and_management__daily_uniform__male__red_necktie.html';
+        });
+        redirect_p_7_bm_du_m.addEventListener('click', function () {
+            window.location.href = 'business_and_management__daily_uniform__male__pants.html';
+        });
+
+        redirect_rs_8_bm_du_f.addEventListener('click', function () {
+            window.location.href = 'business_and_management__daily_uniform__female__red_scarf.html';
+        });
+        redirect_blsb_8_bm_du_f.addEventListener('click', function () {
+            window.location.href = 'business_and_management__daily_uniform__female__blue_long_sleeve_blouse.html';
+        });
+        redirect_sop_8_bm_du_f.addEventListener('click', function () {
+            window.location.href = 'business_and_management__daily_uniform__female__skirt_or_pants.html';
+        });
+
+        redirect_b_7n8_bm_du_u.addEventListener('click', function () {
+            window.location.href = 'business_and_management__daily_uniform__unisex__blazer.html';
+        });
+
+        redirect_wlsp_9_hm_du_m.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__daily_uniform__male__white_long_sleeve_polo.html';
+        });
+        redirect_p_9_hm_du_m.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__daily_uniform__male__pants.html';
+        });
+
+        redirect_wlsb_10_hm_du_f.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__daily_uniform__female__white_long_sleeve_blouse.html';
+        });
+        redirect_sop_10_hm_du_f.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__daily_uniform__female__skirt_or_pants.html';
+        });
+
+        redirect_b_9n10_hm_du_u.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__daily_uniform__unisex__blazer.html';
+        });
+
+        redirect_gscwhn_11_hm_ku_u.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__kitchen_uniform__unisex__gray_skull_cap_with_hair_net.html';
+        });
+        redirect_gcp_11_hm_ku_u.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__kitchen_uniform__unisex__gray_chefs_polo.html';
+        });
+        redirect_a_11_hm_ku_u.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__kitchen_uniform__unisex__apron.html';
+        });
+        redirect_cp_11_hm_ku_u.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__kitchen_uniform__unisex__chefs_pants.html';
+        });
+
+        redirect_wlsp_14_hm_fnbu_m.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__food_and_beverage_uniform__male__white_long_sleeve_polo.html';
+        });
+        redirect_p_14_hm_fnbu_m.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__food_and_beverage_uniform__male__pants.html';
+        });
+
+        redirect_wlsb_15_hm_fnbu_f.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__food_and_beverage_uniform__female__white_long_sleeve_blouse.html';
+        });
+        redirect_sop_15_hm_fnbu_f.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__food_and_beverage_uniform__female__skirt_or_pants.html';
+        });
+
+        redirect_v_14n15_hm_fnbu_u.addEventListener('click', function () {
+            window.location.href = 'hospitality_management__food_and_beverage_uniform__unisex__vest.html';
+        });
+
+        redirect_wp_16_tm_du_m.addEventListener('click', function () {
+            window.location.href = 'tourism_management__daily_uniform__male__white_polo.html';
+        });
+        redirect_yn_16_tm_du_m.addEventListener('click', function () {
+            window.location.href = 'tourism_management__daily_uniform__male__yellow_necktie.html';
+        });
+        redirect_gp_16_tm_du_m.addEventListener('click', function () {
+            window.location.href = 'tourism_management__daily_uniform__male__gray_pants.html';
+        });
+
+        redirect_b_17_tm_du_f.addEventListener('click', function () {
+            window.location.href = 'tourism_management__daily_uniform__female__beret.html';
+        });
+        redirect_wb_17_tm_du_f.addEventListener('click', function () {
+            window.location.href = 'tourism_management__daily_uniform__female__white_blouse.html';
+        });
+        redirect_ys_17_tm_du_f.addEventListener('click', function () {
+            window.location.href = 'tourism_management__daily_uniform__female__yellow_scarf.html';
+        });
+        redirect_gs_17_tm_du_f.addEventListener('click', function () {
+            window.location.href = 'tourism_management__daily_uniform__female__gray_skirt.html';
+        });
+
+        redirect_tp_16n17_tm_du_u.addEventListener('click', function () {
+            window.location.href = 'tourism_management__daily_uniform__unisex__tourism_pin.html';
+        });
+        redirect_tb_16n17_tm_du_u.addEventListener('click', function () {
+            window.location.href = 'tourism_management__daily_uniform__unisex__tourism_blazer.html';
+        });
+
+        redirect_blsp_18_ans_du_m.addEventListener('click', function () {
+            window.location.href = 'arts_and_sciences__daily_uniform__male__blue_long_sleeve_polo.html';
+        });
+        redirect_bn_18_ans_du_m.addEventListener('click', function () {
+            window.location.href = 'arts_and_sciences__daily_uniform__male__blue_necktie.html';
+        });
+        redirect_p_18_ans_du_m.addEventListener('click', function () {
+            window.location.href = 'arts_and_sciences__daily_uniform__male__pants.html';
+        });
+
+        redirect_bs_19_ans_du_f.addEventListener('click', function () {
+            window.location.href = 'arts_and_sciences__daily_uniform__female__blue_scarf.html';
+        });
+        redirect_blsb_19_ans_du_f.addEventListener('click', function () {
+            window.location.href = 'arts_and_sciences__daily_uniform__female__blue_long_sleeve_blouse.html';
+        });
+        redirect_sop_19_ans_du_f.addEventListener('click', function () {
+            window.location.href = 'arts_and_sciences__daily_uniform__female__skirt_or_pants.html';
+        });
+
+        redirect_b_20_ans_du_u.addEventListener('click', function () {
+            window.location.href = 'arts_and_sciences__daily_uniform__unisex__blazer.html';
+        });
+    }
+
+    productSpecifica();
+
+});
+
+function filterVisibility() {
+    let clearFilter = document.getElementById('clear_filter');
+    let checkboxes = document.querySelectorAll('.checkedbox');
+
+    checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener('click', function () {
+            if (isAnyCheckboxChecked(checkboxes)) {
+                clearFilter.style.display = "flex";
+            } 
+            else {
+                clearFilter.style.display = "none";
+            }
+        });
+    });
+
+    clearFilter.addEventListener('click', function () {
+        clearFilter.style.display = "none";
+        checkboxes.forEach(function (checkbox) {
+            checkbox.checked = false;
+        });
+    });
+
+    function isAnyCheckboxChecked(checkboxes) {
+        for (let checkbox of checkboxes) {
+            if (checkbox.checked) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+function uncheckAll() {
+    let checkboxes = document.querySelectorAll('.checkedbox');
+    if (checkboxes.checked === true) {        
+        checkboxes.checked = false;
+    }
+    else {
+        checkboxes.checked = true;
+    }
+}
+
+
+let current_page = 0;
+const page_collection = document.querySelector('.products');
+const pages = document.querySelectorAll('.container');
+const pages_width = pages[0].clientHeight;
+const total_pages = pages.length;
+
+function showPage(index) {
+    if (index < 0) {
+        index = 0;
+    }
+    else if (index >= total_pages) {
+        index = total_pages - 1;
+    }
+
+    current_page = index;
+    page_collection.style.transform = `translateX(-${index * 100}%)`;
+    updateButtonStates();
+    updatePageIndex();
+}
+
+function previousPage() {
+    showPage(current_page - 1);
+}
+
+function nextPage() {
+    showPage(current_page + 1);
+}
+
+function updateButtonStates() {
+    const left_button = document.querySelector('.previous_button');
+    const right_button = document.querySelector('.next_button');
+
+
+    left_button.classList.toggle('unclickable', current_page === 0);
+    right_button.classList.toggle('unclickable', current_page === total_pages - 1);
+}
+
+function updatePageIndex() {
+    const page_collections = document.querySelector('.page_number');
+    page_collections.textContent = current_page + 1;
+}
+
+updateButtonStates();
+updatePageIndex();
+
+</script>
+
+</body>
+</html>

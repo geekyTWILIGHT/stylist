@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="individual_products.css">
+    <title> STylIst - Blue Necktie </title> 
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo"><img src="important_images/stilogo.png" alt="STI Logo"></a>
+            <a href="uniforms.html">Uniforms</a>
+            <a href="about2.html">About</a>
+        </div>
+    </header>
+
+    <div class="specific_product">
+        <img src="necessary_images/shs_white_blouse_with_grey_vest_du_f.jpg" alt="Product Image" id="product_image">
+        <div class="product_content">
+            <img src="necessary_images/simulation_ans_du.jpg" alt="Product Simulation Image" id="product_sim_image">
+            <h1 id="product_specific_name"> Blue Necktie (Arts & Sciences - Male) (Daily Uniform) </h1>
+            <div class="rating"> 
+                <span id="star_rate"> *Star* </span>
+                <span id="reviews"> 309 Reviews </span>
+            </div>
+            <h1 id="products_updating_price"> ₱ 1,700 </h1>
+
+            <hr id="hr_after_price"> 
+
+            <div class="size_title_n_chart">
+                <div class="changing_size"> 
+                    <p id="size_title"> Size: </p>
+                    <p id="changing_size_value"> M </p>
+                </div>
+                <a href=" " id="size_chart_button"> Size Chart </a>
+            </div>
+            <div class="quantity_func">
+                <button id="minus_quan" class="quantity_button quantity" onclick="changingQuantityTextValue('decrease')"> - </button>
+                <p id="quantity_num" class="quantity"> 1 </p>
+                <button id="add_quan" class="quantity_button quantity" onclick="changingQuantityTextValue('increase')"> + </button>
+            </div>
+
+            <div class="center_hr">
+                <hr id="hr_before_size_option"> 
+            </div>
+            
+            <div class="center_size_option">
+                <div class="sizes_option">
+                    <button id="exsmall_size" class="size" onclick="changeSizeTextValue('extraSmall')"> XS </button>
+                    <button id="small_size" class="size" onclick="changeSizeTextValue('small')"> S </button>
+                    <button id="medium_size" class="size" onclick="changeSizeTextValue('medium')"> M </button>
+                    <button id="large_size" class="size" onclick="changeSizeTextValue('large')"> L </button>
+                    <button id="exlarge_size" class="size" onclick="changeSizeTextValue('extraLarge')"> XL </button>
+                </div>
+            </div>
+
+            <div class="center_add_to_cart_button">
+                <button id="add_to_cart_button"> Add to Cart </button>
+                <button id="buy_now_button"> Buy Now </button>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+function changeSizeTextValue(sizeValue) {
+    let chagingTextValue = document.getElementById('changing_size_value');
+
+    let xsPressed = document.getElementById('exsmall_size');
+    let sPressed = document.getElementById('small_size');
+    let mPressed = document.getElementById('medium_size');
+    let lPressed = document.getElementById('large_size');
+    let xlPressed = document.getElementById('exlarge_size');
+
+    if (sizeValue === 'extraSmall') {
+        document.getElementById('changing_size_value').innerHTML = "XS";
+    }
+    else if (sizeValue === 'small') {
+        document.getElementById('changing_size_value').innerHTML = "S";
+    }
+    else if (sizeValue === 'medium') {
+        document.getElementById('changing_size_value').innerHTML = "M";
+    }
+    else if (sizeValue === 'large') {
+        document.getElementById('changing_size_value').innerHTML = "L";
+    }
+    else if (sizeValue === "extraLarge") {
+        document.getElementById('changing_size_value').innerHTML = "XL";
+    }
+    else {
+        document.getElementById('changing_size_value').innerHTML = "?";
+    }
+}
+
+function changingQuantityTextValue(numberValue) {
+    let currentNumber = parseInt(document.getElementById("quantity_num").innerHTML);
+
+    if (numberValue === 'increase' && currentNumber < 50) {
+      currentNumber++;
+    } else if (numberValue === 'decrease' && currentNumber > 1) {
+      currentNumber--;
+    }
+
+    document.getElementById("quantity_num").innerHTML = currentNumber;
+
+    if (currentNumber === 1) {
+      document.getElementById("minus_quan").style.cursor = 'not-allowed';
+      document.getElementById("add_quan").style.cursor = 'pointer';
+    } else if (currentNumber === 50) {
+      document.getElementById("add_quan").style.cursor = 'not-allowed';
+      document.getElementById("minus_quan").style.cursor = 'pointer';
+    } else {
+      document.getElementById("add_quan").style.cursor = 'pointer';
+      document.getElementById("minus_quan").style.cursor = 'pointer';
+    }
+  }
+
+</script>
+
+</body>
+</html>

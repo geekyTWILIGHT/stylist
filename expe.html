@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Slider</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 20px;
+      text-align: center;
+      margin: 5px;
+    }
+
+    .slider-btn-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+    }
+
+    .slider-btn {
+      width: 40px;
+      height: 40px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      margin: 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .slider-btn-left {
+      order: 1;
+    }
+
+    .slider-btn-right {
+      order: 3;
+    }
+
+    .slider-index {
+      order: 2;
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .unclickable {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide">
+      <div class="product">Product 1</div>
+      <div class="product">Product 2</div>
+      <div class="product">Product 3</div>
+      <div class="product">Product 4</div>
+      <div class="product">Product 5</div>
+      <div class="product">Product 6</div>
+      <div class="product">Product 7</div>
+      <div class="product">Product 8</div>
+      <div class="product">Product 9</div>
+    </div>
+    <div class="slide">
+      <div class="product">Product 10</div>
+      <div class="product">Product 11</div>
+      <div class="product">Product 12</div>
+      <div class="product">Product 13</div>
+      <div class="product">Product 14</div>
+      <div class="product">Product 15</div>
+      <div class="product">Product 16</div>
+      <div class="product">Product 17</div>
+      <div class="product">Product 18</div>
+    </div>
+  </div>
+  <div class="slider-btn-container">
+    <button class="slider-btn slider-btn-left" onclick="prevSlide()">‹</button>
+    <span class="slider-index">1</span>
+    <button class="slider-btn slider-btn-right" onclick="nextSlide()">›</button>
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelectorAll('.slide');
+  const slideWidth = slides[0].clientWidth;
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    if (index < 0) {
+      index = 0;
+    } else if (index >= totalSlides) {
+      index = totalSlides - 1;
+    }
+
+    currentIndex = index;
+    slider.style.transform = `translateX(${-index * slideWidth}px)`;
+    updateButtonStates();
+    updateSliderIndex();
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function updateButtonStates() {
+    const leftButton = document.querySelector('.slider-btn-left');
+    const rightButton = document.querySelector('.slider-btn-right');
+
+    leftButton.classList.toggle('unclickable', currentIndex === 0);
+    rightButton.classList.toggle('unclickable', currentIndex === totalSlides - 1);
+  }
+
+  function updateSliderIndex() {
+    const sliderIndex = document.querySelector('.slider-index');
+    sliderIndex.textContent = currentIndex + 1;
+  }
+
+  updateButtonStates();
+  updateSliderIndex();
+</script>
+
+</body>
+</html>
