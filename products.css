@@ -45,6 +45,9 @@
     flex-direction: column;
     margin-left: 2%;
     width: 22.5%;
+    height: 35%;
+    top: 17.5%;
+    margin-bottom: 8%;
 }
 
 .sidenav_n_content > .side_nav_bar > #sort_by_title {
@@ -132,6 +135,22 @@
     width: 100%;
 }
 
+.sidenav_n_content > .side_nav_bar > .grade_level > .grade_level_selection {
+    height: 10vh;
+}
+
+.sidenav_n_content > .side_nav_bar > .uniform_type > .uniform_type_selection {
+    height: 15vh;
+}
+
+.sidenav_n_content > .side_nav_bar > .course > .course_selection {
+    height: 30vh;
+}
+
+.sidenav_n_content > .side_nav_bar > .sex > .sex_selection {
+    height: 15vh;
+}
+
 .sidenav_n_content > .side_nav_bar > .grade_level > .grade_level_selection > input,
 .sidenav_n_content > .side_nav_bar > .uniform_type > .uniform_type_selection > input,
 .sidenav_n_content > .side_nav_bar > .course > .course_selection > input,
@@ -146,7 +165,7 @@
     font-weight: 50;
     position: relative;
     left: 10%;
-    top: -24%;
+    bottom: 25.5%;
 }
 
 .sidenav_n_content > .side_nav_bar > .uniform_type > .uniform_type_selection > label {
@@ -180,16 +199,33 @@
     display: none; 
 }
 
-.sidenav_n_content > .products {
+
+
+
+
+.sidenav_n_content > .pages  {
     width: 75%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    position: relative;
     margin-left: 3%;
     margin-right: 0;
+    overflow: hidden;
 }
 
-.sidenav_n_content > .products > .product {
+.sidenav_n_content > .pages > .products {
+    display: flex;
+    transition: transform 0.6s linear;
+    width: 100%;
+}
+
+.sidenav_n_content > .pages > .products > .container {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.sidenav_n_content > .pages > .products > .container > .product {
     width: 340px;
     /* height: 520px; */
     /* height: 460px; */
@@ -203,11 +239,11 @@
     cursor: pointer;
 }
 
-.sidenav_n_content > .products > .product:hover {
+.sidenav_n_content > .pages > .products > .container > .product:hover {
     box-shadow: 3px 5px 3px #bfbfbf, -2px -2px 3px #bfbfbf;
 }
 
-.sidenav_n_content > .products > .product > img {
+.sidenav_n_content > .pages > .products > .container > .product > img {
     width: 96.47%;
     height: 348px;
     margin-left: 6px;
@@ -215,20 +251,20 @@
     /* height: 430px; */
 }
 
-.sidenav_n_content > .products > .product > .product_info {
+.sidenav_n_content > .pages > .products > .container > .product > .product_info {
     display: flex;
     flex-direction: column;
     margin-left: 2%;
 }
 
-.sidenav_n_content > .products > .product > .product_info > #product_name {
+.sidenav_n_content > .pages > .products > .container > .product > .product_info > #product_name {
     font-size: 14px;
     width: 96.47%;
     height: 35px;
     margin-top: 3%;
 }
 
-.sidenav_n_content > .products > .product > .product_info > #product_price {
+.sidenav_n_content > .pages > .products > .container > .product > .product_info > #product_price {
     font-size: 15px;
     color: #ef612e;
     font-weight: lighter;
@@ -238,24 +274,38 @@
     height: 10px;
 }
 
-.sidenav_n_content > .products > .product > .product_info > .reviews {
+.sidenav_n_content > .pages > .products > .container > .product > .product_info > .reviews {
     display: flex;
     flex-direction: row;
     width: 96.47%;
     height: 10px; 
 }
 
-.sidenav_n_content > .products > .product > .product_info > .reviews > #rating {
+.sidenav_n_content > .pages > .products > .container > .product > .product_info > .reviews > #rating {
     font-size: 15px;
     /* color: #ef612e; */
     color: #edb51a;
     margin-right: 1%;
 }
 
-.sidenav_n_content > .products > .product > .product_info > .reviews > #bought {
+.sidenav_n_content > .pages > .products > .container > .product > .product_info > .reviews > #bought {
     font-size: 14px;
     /* color: #8c8c8e; */
     color: #48453c;
 }
 
+.sidenav_n_content > .pages > .page_buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 15%;
+    height: 15vh;
+    left: 41.5%;
+}
 
+.sidenav_n_content > .pages > .page_buttons > .page_button {
+    width: 27.5%;
+    height: 25%;
+}
