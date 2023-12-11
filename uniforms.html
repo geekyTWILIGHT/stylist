@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="products.css">
-    <title> STylIst - Uniforms </title> 
+    <title> STylIst </title> 
 </head>
 <body>
 
@@ -40,9 +40,9 @@
             <form class="grade_level" action=""> 
                 <button id="grade_level_title" type="button" onclick="gradeLvlSelec()"> Grade Level </button>
                 <div class="grade_level_selection selection" id="grade_level_selection">
-                    <input type="checkbox" name="shs" id="shs_grade_level" class="checkedbox" onclick="filterVisibility()" value="shs_uniform">
+                    <input type="checkbox" name="shs" id="shs_grade_level" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="shs_uniform">
                         <label for="shs_grade_level"> Senior High School </label>
-                    <input type="checkbox" name="college" id="college_grade_level" class="checkedbox" value="college_uniform">
+                    <input type="checkbox" name="college" id="college_grade_level" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="college_uniform">
                         <label for="college_grade_level"> College </label>  
                 </div>
             </form>
@@ -52,11 +52,11 @@
             <form class="uniform_type" action="">
                 <button id="uniform_type_title" type="button" onclick="unifTypeSelec()"> Uniform Type </button>
                 <div class="uniform_type_selection selection" id="uniform_type_selection">
-                    <input type="checkbox" name="daily_uniform" id="daily_uniform_type" class="checkedbox" value="daily_uniform_type">
+                    <input type="checkbox" name="daily_uniform" id="daily_uniform_type" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="daily_uniform">
                         <label for="casual_uniform_type"> Daily Uniform </label>
-                    <input type="checkbox" name="kitchen_uniform" id="kitchen_uniform_type" class="checkedbox" value="kitchen_uniform_type">
+                    <input type="checkbox" name="kitchen_uniform" id="kitchen_uniform_type" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="kitchen_uniform">
                         <label for="pe_uniform_type"> Kitchen Uniform </label>
-                    <input type="checkbox" name="fnb_uniform" id="fnb_uniform_type" class="checkedbox" value="fnb_uniform_type">
+                    <input type="checkbox" name="fnb_uniform" id="fnb_uniform_type" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="fnb_uniform">
                         <label for="pe_uniform_type"> Food & Beverage (F&B) Uniform </label>
                 </div>
             </form>
@@ -66,17 +66,17 @@
             <form class="course">
                 <button id="course_title" type="button" onclick="courseSelec()"> Program </button>
                 <div class="course_selection selection" id="course_selection"> 
-                    <input type="checkbox" name="ict_course" id="ict_course" class="checkedbox" value="">
+                    <input type="checkbox" name="ict_course" id="ict_course" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="information_and_communications_technology_course">
                         <label for="ict_course"> Information & Communications Technology </label>
-                    <input type="checkbox" name="bm_course" id="bm_course" class="checkedbox" value="">
+                    <input type="checkbox" name="bm_course" id="bm_course" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="business_and_management_course">
                         <label for="bm_course"> Business & Management </label>
-                    <input type="checkbox" name="hm_course" id="hm_course" class="checkedbox" value="">
+                    <input type="checkbox" name="hm_course" id="hm_course" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="hospitality_management_course">
                         <label for="hm_course"> Hospitality Management </label>
-                    <input type="checkbox" name="tm_course" id="tm_course" class="checkedbox" value="">
+                    <input type="checkbox" name="tm_course" id="tm_course" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="tourism_management_course">
                         <label for="tm_course"> Tourism Management </label>
-                    <input type="checkbox" name="engineering_course" id="engineering_course" class="checkedbox" value="">
+                    <input type="checkbox" name="engineering_course" id="engineering_course" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="engineering_course">
                         <label for="engineering_course"> Engineering </label>
-                    <input type="checkbox" name="as_course" id="as_course" class="checkedbox" value="">
+                    <input type="checkbox" name="as_course" id="as_course" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="arts_and_sciences_course">
                         <label for="as_course"> Arts & Sciences </label>
                 </div>
             </form>
@@ -86,11 +86,11 @@
             <form class="sex">
                 <button id="sex" type="button" onclick="sexSelec()"> Sex </button>
                 <div class="sex_selection selection" id="sex_selection">
-                    <input type="checkbox" name="male" id="male" class="checkedbox"value=""> 
+                    <input type="checkbox" name="male" id="male_gender" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="male_uniform"> 
                         <label for="male"> Male </label>
-                    <input type="checkbox" name="female" id="female" class="checkedbox"value="">
+                    <input type="checkbox" name="female" id="female_gender" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="female_uniform">
                         <label for="female"> Female </label>
-                    <input type="checkbox" name="unisex" id="unisex" class="checkedbox" value="">
+                    <input type="checkbox" name="unisex" id="unisex_gender" class="checkedbox" onclick="filterVisibility(); filterContentsVisibility()" value="unisex_uniform">
                         <label for="unisex"> Unisex </label>
                 </div>
             </form>  
@@ -102,7 +102,7 @@
         <div class="pages">
         <div class="products">
             <div class="container container1">
-            <div class="product product_1_1" id="wpwgv_1_shs_du_m" onclick="productSpecifica()">
+            <div class="product product_1_1" id="wpwgv_1_shs_du_m" onclick="productSpecifica()" data-category="shs_uniform daily_uniform lalake_uniform">
                 <img src="necessary_images/shs_white_polo_with_grey_vest_du_m.jpg" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> White Polo with Grey Vest (Senior High School - Male) (Daily Uniform) </h3>
@@ -114,7 +114,7 @@
                 </div>
             </div>
 
-            <div class="product product_1_2" id="dbs_1_shs_du_m" onclick="productSpecifica()">
+            <div class="product product_1_2" id="dbs_1_shs_du_m" onclick="productSpecifica()" data-category="shs_uniform daily_uniform lalake_uniform">
                 <img src="necessary_images/shs_dark_blue_slacks_du_m.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Dark Blue Slacks (Senior High School - Male) (Daily Uniform) </h3>
@@ -126,7 +126,7 @@
                 </div>
             </div>
 
-            <div class="product product_2_1" id="wbwgv_2_shs_du_f" onclick="productSpecifica()">
+            <div class="product product_2_1" id="wbwgv_2_shs_du_f" onclick="productSpecifica()" data-category="shs_uniform daily_uniform babae_uniform">
                 <img src="necessary_images/shs_white_blouse_with_grey_vest_du_f.jpg" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> White Blouse with Grey Vest (Senior High School - Female) (Daily Uniform) </h3>
@@ -138,7 +138,7 @@
                 </div>
             </div>
 
-            <div class="product product_2_2" id="dbpcs_2_shs_du_f" onclick="productSpecifica()">
+            <div class="product product_2_2" id="dbpcs_2_shs_du_f" onclick="productSpecifica()" data-category="shs_uniform daily_uniform babae_uniform">
                 <img src="necessary_images/shs_dark_pencil_cut_skirt_du_f.jpg" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Dark Blue Pencil-Cut Skirt [2 Inches Above the Knee Cap] (Senior High School - Female) (Daily Uniform) </h3>
@@ -150,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="product product_1n2_1" id="n_1n2_shs_du_u" onclick="productSpecifica()">
+            <div class="product product_1n2_1" id="n_1n2_shs_du_u" onclick="productSpecifica()" data-category="shs_uniform daily_uniform kahit_kanino_uniform">
                 <img src="necessary_images/shs_necktie_du_u.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Necktie (Senior High School - Unisex) (Daily Uniform) </h3>
@@ -162,7 +162,7 @@
                 </div>
             </div>
 
-            <div class="product product_3_1" id="cb_3_shs_ku_u" onclick="productSpecifica()">
+            <div class="product product_3_1" id="cb_3_shs_ku_u" onclick="productSpecifica()" data-category="shs_uniform kitchen_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Checkered Beanie (SHS Culinary Art Strand Exclusive - Unisex) (Kitchen Uniform) </h3>
@@ -174,7 +174,7 @@
                 </div>
             </div>
 
-            <div class="product product_3_2" id="wcp_3_shs_ku_u" onclick="productSpecifica()">
+            <div class="product product_3_2" id="wcp_3_shs_ku_u" onclick="productSpecifica()" data-category="shs_uniform kitchen_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> White Chef's Polo (SHS Culinary Art Strand Exclusive - Unisex) (Kitchen Uniform) </h3>
@@ -186,7 +186,7 @@
                 </div>
             </div>
 
-            <div class="product product_3_3" id="cp_3_shs_ku_u" onclick="productSpecifica()">
+            <div class="product product_3_3" id="cp_3_shs_ku_u" onclick="productSpecifica()" data-category="shs_uniform kitchen_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Checkered Pants (SHS Culinary Art Strand Exclusive - Unisex) (Kitchen Uniform) </h3>
@@ -215,7 +215,7 @@
                 </div>
             </div> -->
 
-            <div class="product product_5_1" id="gpwtfs_5_ictne_du_m" onclick="productSpecifica()">
+            <div class="product product_5_1" id="gpwtfs_5_ictne_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform ict_uniform engineering_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Gray Polo with 3/4 Sleeves (ICT & Engineering - Male) (Daily Uniform) </h3>
@@ -230,7 +230,7 @@
             </div>
             <div class="container container2">
 
-            <div class="product product_5_2" id="p_5_ictne_du_m" onclick="productSpecifica()">
+            <div class="product product_5_2" id="p_5_ictne_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform ict_uniform engineering_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Pants (ICT & Engineering - Male) (Daily Uniform) </h3>
@@ -242,7 +242,7 @@
                 </div>
             </div>
 
-            <div class="product product_6_1" id="gbwtfs_6_ictne_du_f" onclick="productSpecifica()">
+            <div class="product product_6_1" id="gbwtfs_6_ictne_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform ict_uniform engineering_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Gray Blouse with 3/4 Sleeves (ICT & Engineering - Female) (Daily Uniform) </h3>
@@ -254,7 +254,7 @@
                 </div>
             </div>
 
-            <div class="product product_6_2" id="sop_6_ictne_du_f" onclick="productSpecifica()">
+            <div class="product product_6_2" id="sop_6_ictne_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform ict_uniform engineering_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Skirt or Pants (ICT & Engineering - Female) (Daily Uniform) </h3>
@@ -266,7 +266,7 @@
                 </div>
             </div>
 
-            <div class="product product_7_1" id="blsp_7_bm_du_m" onclick="productSpecifica()">
+            <div class="product product_7_1" id="blsp_7_bm_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform bm_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Blue Long Sleeve Polo (Business & Management - Male) (Daily Uniform) </h3>
@@ -278,7 +278,7 @@
                 </div>
             </div>
 
-            <div class="product product_7_2" id="rn_7_bm_du_m" onclick="productSpecifica()">
+            <div class="product product_7_2" id="rn_7_bm_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform bm_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Red Necktie (Business & Management - Male) (Daily Uniform) </h3>
@@ -293,7 +293,7 @@
             <!-- Note: The "Pants (Business & Management - Male) (Daily Uniform)" may not be included in the final output as it 
                 looks similar to "Pants (ICT & Engineering - Male) (Daily Uniform)" -->
 
-            <div class="product product_7_3" id="p_7_bm_du_m" onclick="productSpecifica()">
+            <div class="product product_7_3" id="p_7_bm_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform bm_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Pants (Business & Management - Male) (Daily Uniform) </h3>
@@ -305,7 +305,7 @@
                 </div>
             </div>
 
-            <div class="product product_8_1" id="rs_8_bm_du_f" onclick="productSpecifica()">
+            <div class="product product_8_1" id="rs_8_bm_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform bm_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Red Scarf (Business & Management - Female) (Daily Uniform) </h3>
@@ -317,7 +317,7 @@
                 </div>
             </div>
 
-            <div class="product product_8_2" id="blsb_8_bm_du_f" onclick="productSpecifica()">
+            <div class="product product_8_2" id="blsb_8_bm_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform bm_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Blue Long Sleeve Blouse (Business & Management - Female) (Daily Uniform) </h3>
@@ -332,7 +332,7 @@
             <!-- Note: The "Skirt or Pants (Business & Management - Female) (Daily Uniform)" may not be included in the final output 
                 as it looks similar to "Skirt or Pants (ICT & Engineering - Female) (Daily Uniform)" -->
 
-            <div class="product product_8_3" id="sop_8_bm_du_f" onclick="productSpecifica()">
+            <div class="product product_8_3" id="sop_8_bm_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform bm_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Skirt or Pants (Business & Management - Female) (Daily Uniform) </h3>
@@ -347,7 +347,7 @@
             </div>
             <div class="container container3">
 
-            <div class="product product_7n8_1" id="b_7n8_bm_du_u" onclick="productSpecifica()">
+            <div class="product product_7n8_1" id="b_7n8_bm_du_u" onclick="productSpecifica()" data-category="college_uniform daily_uniform bm_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Blazer (Business & Management - Unisex) (Daily Uniform) </h3>
@@ -359,7 +359,7 @@
                 </div>
             </div>
 
-            <div class="product product_9_1" id="wlsp_9_hm_du_m" onclick="productSpecifica()">
+            <div class="product product_9_1" id="wlsp_9_hm_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform hm_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> White Long Sleeve Polo (Hospitality Management - Male) (Daily Uniform) </h3>
@@ -375,7 +375,7 @@
                 looks similar to "Pants (ICT & Engineering - Male) (Daily Uniform) and Pants (Business & Management - Male) 
                 (Daily Uniform)" -->
 
-            <div class="product product_9_2" id="p_9_hm_du_m" onclick="productSpecifica()">
+            <div class="product product_9_2" id="p_9_hm_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform hm_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Pants (Hospitality Management - Male) (Daily Uniform) </h3>
@@ -387,7 +387,7 @@
                 </div>
             </div>
 
-            <div class="product product_10_1" id="wlsb_10_hm_du_f" onclick="productSpecifica()">
+            <div class="product product_10_1" id="wlsb_10_hm_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform hm_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> White Long Sleeve Blouse (Hospitality Management - Female) (Daily Uniform) </h3>
@@ -403,7 +403,7 @@
                 as it looks similar to "Skirt or Pants (ICT & Engineering - Female) (Daily Uniform) and Pants 
                 (Business & Management - Female) (Daily Uniform)" -->
 
-            <div class="product product_10_2" id="sop_10_hm_du_f" onclick="productSpecifica()">
+            <div class="product product_10_2" id="sop_10_hm_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform hm_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Skirt or Pants (Hospitality Management - Female) (Daily Uniform) </h3>
@@ -418,7 +418,7 @@
             <!-- Note: The "Blazer (Hospitality Management - Unisex) (Daily Uniform)" may not be included in the final output
                 as it looks similar to "Blazer (Business & Management - Unisex) (Daily Uniform)"-->
 
-            <div class="product product_9n10_1" id="b_9n10_hm_du_u" onclick="productSpecifica()">
+            <div class="product product_9n10_1" id="b_9n10_hm_du_u" onclick="productSpecifica()" data-category="college_uniform daily_uniform hm_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Blazer (Hospitality Management - Unisex) (Daily Uniform) </h3>
@@ -430,7 +430,7 @@
                 </div>
             </div>
 
-            <div class="product product_11_1" id="gscwhn_11_hm_ku_u" onclick="productSpecifica()">
+            <div class="product product_11_1" id="gscwhn_11_hm_ku_u" onclick="productSpecifica()" data-category="college_uniform kitchen_uniform hm_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Gray Skull Cap with Hair Net (Hospitality Management - Unisex) (Kitchen Uniform) </h3>
@@ -442,7 +442,7 @@
                 </div>
             </div>
 
-            <div class="product product_11_2" id="gcp_11_hm_ku_u" onclick="productSpecifica()">
+            <div class="product product_11_2" id="gcp_11_hm_ku_u" onclick="productSpecifica()" data-category="college_uniform kitchen_uniform hm_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Gray Chef's Polo (Hospitality Management - Unisex) (Kitchen Uniform) </h3>
@@ -454,7 +454,7 @@
                 </div>
             </div>
 
-            <div class="product product_11_3" id="a_11_hm_ku_u" onclick="productSpecifica()">
+            <div class="product product_11_3" id="a_11_hm_ku_u" onclick="productSpecifica()" data-category="college_uniform kitchen_uniform hm_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Apron (Hospitality Management - Unisex) (Kitchen Uniform) </h3>
@@ -469,7 +469,7 @@
             </div>
             <div class="container container4">
 
-            <div class="product product_11_4" id="cp_11_hm_ku_u" onclick="productSpecifica()">
+            <div class="product product_11_4" id="cp_11_hm_ku_u" onclick="productSpecifica()" data-category="college_uniform kitchen_uniform hm_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Chef's Pants (Hospitality Management - Unisex) (Kitchen Uniform) </h3>
@@ -487,7 +487,7 @@
             <!-- "White Long Sleeve Polo (Hospitality Management - Male) (F&B Uniform)" looks similar to 
                 "White Long Sleeve Polo (Hospitality Management - Male) (Daily Uniform)"-->
 
-            <div class="product product_14_1" id="wlsp_14_hm_fnbu_m" onclick="productSpecifica()">
+            <div class="product product_14_1" id="wlsp_14_hm_fnbu_m" onclick="productSpecifica()" data-category="college_uniform food_and_beverages_uniform hm_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> White Long Sleeve Polo (Hospitality Management - Male) (F&B Uniform) </h3>
@@ -499,7 +499,7 @@
                 </div>
             </div>
 
-            <div class="product product_14_2" id="p_14_hm_fnbu_m" onclick="productSpecifica()">
+            <div class="product product_14_2" id="p_14_hm_fnbu_m" onclick="productSpecifica()" data-category="college_uniform food_and_beverages_uniform hm_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Pants (Hospitality Management - Male) (F&B Uniform) </h3>
@@ -511,7 +511,7 @@
                 </div>
             </div>
 
-            <div class="product product_15_1" id="wlsb_15_hm_fnbu_f" onclick="productSpecifica()">
+            <div class="product product_15_1" id="wlsb_15_hm_fnbu_f" onclick="productSpecifica()" data-category="college_uniform food_and_beverages_uniform hm_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> White Long Sleeve Blouse (Hospitality Management - Female) (F&B Uniform) </h3>
@@ -523,7 +523,7 @@
                 </div>
             </div>
 
-            <div class="product product_15_2" id="sop_15_hm_fnbu_f" onclick="productSpecifica()">
+            <div class="product product_15_2" id="sop_15_hm_fnbu_f" onclick="productSpecifica()" data-category="college_uniform food_and_beverages_uniform hm_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Skirt or Pants (Hospitality Management - Female) (F&B Uniform) </h3>
@@ -535,7 +535,7 @@
                 </div>
             </div>
 
-            <div class="product product_14n15_1" id="v_14n15_hm_fnbu_u" onclick="productSpecifica()">
+            <div class="product product_14n15_1" id="v_14n15_hm_fnbu_u" onclick="productSpecifica()" data-category="college_uniform food_and_beverages_uniform hm_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Vest (Hospitality Management - Unisex) (F&B Uniform) </h3>
@@ -547,7 +547,7 @@
                 </div>
             </div>
 
-            <div class="product product_16_1" id="wp_16_tm_du_m" onclick="productSpecifica()">
+            <div class="product product_16_1" id="wp_16_tm_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform tm_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> White Polo (Tourism Management - Male) (Daily Uniform) </h3>
@@ -559,7 +559,7 @@
                 </div>
             </div>
 
-            <div class="product product_16_2" id="yn_16_tm_du_m" onclick="productSpecifica()">
+            <div class="product product_16_2" id="yn_16_tm_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform tm_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Yellow Necktie (Tourism Management - Male) (Daily Uniform) </h3>
@@ -571,7 +571,7 @@
                 </div>
             </div>
 
-            <div class="product product_16_3" id="gp_16_tm_du_m" onclick="productSpecifica()">
+            <div class="product product_16_3" id="gp_16_tm_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform tm_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Gray Pants (Tourism Management - Male) (Daily Uniform) </h3>
@@ -586,7 +586,7 @@
             </div>
             <div class="container container5">
 
-            <div class="product product_17_1" id="b_17_tm_du_f" onclick="productSpecifica()">
+            <div class="product product_17_1" id="b_17_tm_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform tm_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Beret (Tourism Management - Female) (Daily Uniform) </h3>
@@ -598,7 +598,7 @@
                 </div>
             </div>
 
-            <div class="product product_17_2" id="wb_17_tm_du_f" onclick="productSpecifica()">
+            <div class="product product_17_2" id="wb_17_tm_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform tm_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> White Blouse (Tourism Management - Female) (Daily Uniform) </h3>
@@ -609,8 +609,8 @@
                     </div>
                 </div>
             </div>
-
-            <div class="product product_17_3" id="ys_17_tm_du_f" onclick="productSpecifica()">
+ 
+            <div class="product product_17_3" id="ys_17_tm_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform tm_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Yellow Scarf (Tourism Management - Female) (Daily Uniform) </h3>
@@ -622,7 +622,7 @@
                 </div>
             </div>
 
-            <div class="product product_17_4" id="gs_17_tm_du_f" onclick="productSpecifica()">
+            <div class="product product_17_4" id="gs_17_tm_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform tm_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Gray Skirt (Tourism Management - Female) (Daily Uniform) </h3>
@@ -636,7 +636,7 @@
 
             <!-- Note: Include "Skin-Toned Stockings" in "Tourism Management - Female" if it is provided by STI -->
 
-            <div class="product product_16n17_1" id="tp_16n17_tm_du_u" onclick="productSpecifica()">
+            <div class="product product_16n17_1" id="tp_16n17_tm_du_u" onclick="productSpecifica()" data-category="college_uniform daily_uniform tm_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Tourism Pin (Tourism Management - Unisex) (Daily Uniform) </h3>
@@ -648,7 +648,7 @@
                 </div>
             </div>
 
-            <div class="product product_16n17_2" id="tb_16n17_tm_du_u" onclick="productSpecifica()">
+            <div class="product product_16n17_2" id="tb_16n17_tm_du_u" onclick="productSpecifica()" data-category="college_uniform daily_uniform tm_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Tourism Blazer (Tourism Management - Unisex) (Daily Uniform) </h3>
@@ -660,7 +660,7 @@
                 </div>
             </div>
 
-            <div class="product product_18_1" id="blsp_18_ans_du_m" onclick="productSpecifica()">
+            <div class="product product_18_1" id="blsp_18_ans_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform as_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Blue Long Sleeve Polo (Arts & Sciences - Male) (Daily Uniform) </h3>
@@ -672,7 +672,7 @@
                 </div>
             </div>
 
-            <div class="product product_18_2" id="bn_18_ans_du_m" onclick="productSpecifica()">
+            <div class="product product_18_2" id="bn_18_ans_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform as_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Blue Necktie (Arts & Sciences - Male) (Daily Uniform) </h3>
@@ -684,7 +684,7 @@
                 </div>
             </div>
 
-            <div class="product product_18_3" id="p_18_ans_du_m" onclick="productSpecifica()">
+            <div class="product product_18_3" id="p_18_ans_du_m" onclick="productSpecifica()" data-category="college_uniform daily_uniform as_uniform lalake_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Pants (Arts & Sciences - Male) (Daily Uniform) </h3>
@@ -699,7 +699,7 @@
             </div>
             <div class="container container6">
 
-            <div class="product product_19_1" id="bs_19_ans_du_f" onclick="productSpecifica()">
+            <div class="product product_19_1" id="bs_19_ans_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform as_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Blue Scarf (Arts & Sciences - Female) (Daily Uniform) </h3>
@@ -711,7 +711,7 @@
                 </div>
             </div>
 
-            <div class="product product_19_2" id="blsb_19_ans_du_f" onclick="productSpecifica()">
+            <div class="product product_19_2" id="blsb_19_ans_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform as_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Blue Long Sleeve Blouse (Arts & Sciences - Female) (Daily Uniform) </h3>
@@ -723,7 +723,7 @@
                 </div>
             </div>
 
-            <div class="product product_19_3" id="sop_19_ans_du_f" onclick="productSpecifica()">
+            <div class="product product_19_3" id="sop_19_ans_du_f" onclick="productSpecifica()" data-category="college_uniform daily_uniform as_uniform babae_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Skirt or Pants (Arts & Sciences - Female) (Daily Uniform) </h3>
@@ -735,7 +735,7 @@
                 </div>
             </div>
 
-            <div class="product product_20_1" id="b_20_ans_du_u" onclick="productSpecifica()">
+            <div class="product product_20_1" id="b_20_ans_du_u" onclick="productSpecifica()" data-category="college_uniform daily_uniform as_uniform kahit_kanino_uniform">
                 <img src="SHS_Daily_Uniform.png" alt="Product Image" id="product_image">
                 <div class="product_info">
                     <h3 id="product_name"> Blazer (Arts & Sciences - Unisex) (Daily Uniform) </h3>
@@ -755,6 +755,8 @@
         </div>
         </div>
     </div>
+
+    <button id="up_button" type="button" onclick="goUpButton()"> ▲ </button>
 
 <script>
 function gradeLvlSelec() {
@@ -1137,6 +1139,246 @@ function updatePageIndex() {
 
 updateButtonStates();
 updatePageIndex();
+
+function filterContentsVisibility() {
+    let shs_checkbox = document.getElementById('shs_grade_level');
+    let college_checkbox = document.getElementById('college_grade_level');
+
+    let daily_uniform_checkbox = document.getElementById('daily_uniform_type');
+    let kitchen_uniform_checkbox = document.getElementById('kitchen_uniform_type');
+    let food_and_beverages_uniform_checkbox = document.getElementById('fnb_uniform_type');
+
+    let information_and_communications_technology_checkbox = document.getElementById('ict_course');
+    let business_and_management_checkbox = document.getElementById('bm_course');
+    let hospitality_management_checkbox = document.getElementById('hm_course');
+    let tourism_management_checkbox = document.getElementById('tm_course');
+    let engineering_checkbox = document.getElementById('engineering_course');
+    let arts_and_sciences_checkbox = document.getElementById('as_course');
+
+    let male_checkbox = document.getElementById('male_gender');
+    let female_checkbox = document.getElementById('female_gender');
+    let unisex_checkbox = document.getElementById('unisex_gender');
+
+    let products = document.querySelectorAll('.product');
+
+    let default_checkboxes_clear_all = document.getElementById('clear_filter');
+
+    default_checkboxes_clear_all.addEventListener('click', function () {
+        let no_checkbox_selected = !shs_checkbox.checked && !college_checkbox.checked
+        && !daily_uniform_checkbox.checked  && !kitchen_uniform_checkbox.checked && !food_and_beverages_uniform_checkbox.checked 
+        && !information_and_communications_technology_checkbox.checked && !business_and_management_checkbox.checked && !hospitality_management_checkbox.checked 
+        && !tourism_management_checkbox.checked && !engineering_checkbox.checked && !arts_and_sciences_checkbox.checked
+        && !male_checkbox.checked && !female_checkbox.checked && !unisex_checkbox.checked;
+
+    if (no_checkbox_selected) {
+        products.forEach(function(product) {
+            product.style.display = 'block';
+        });
+        return;
+    }
+    });
+
+    let no_checkbox_selected = !shs_checkbox.checked && !college_checkbox.checked
+        && !daily_uniform_checkbox.checked  && !kitchen_uniform_checkbox.checked && !food_and_beverages_uniform_checkbox.checked 
+        && !information_and_communications_technology_checkbox.checked && !business_and_management_checkbox.checked && !hospitality_management_checkbox.checked 
+        && !tourism_management_checkbox.checked && !engineering_checkbox.checked && !arts_and_sciences_checkbox.checked
+        && !male_checkbox.checked && !female_checkbox.checked && !unisex_checkbox.checked;
+
+    if (no_checkbox_selected) {
+        products.forEach(function(product) {
+            product.style.display = 'block';
+        });
+        return;
+    }
+
+    products.forEach(function(product) {
+        let category = product.getAttribute('data-category');
+        // let display_products = false;
+
+        // if (shs_checkbox.checked && category.includes('shs_uniform')) {
+        //     display_products = true;
+        // } 
+        // else if (college_checkbox.checked && category.includes('college_uniform')) {
+        //     display_products = true;
+        // } 
+        // else if (daily_uniform_checkbox.checked && category.includes('daily_uniform')) {
+        //     display_products = true;
+        // }
+        // else if (kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform')) {
+        //     display_products = true;
+        // }
+        // else if (food_and_beverages_uniform_checkbox.checked && category.includes('food_and_beverages_uniform')) {
+        //     display_products = true;
+        // }
+        // else if (information_and_communications_technology_checkbox.checked && category.includes('ict_uniform')) {
+        //     display_products = true;
+        // }
+        // else if (business_and_management_checkbox.checked && category.includes('bm_uniform')) {
+        //     display_products = true;
+        // }
+        // else if (hospitality_management_checkbox.checked && category.includes('hm_uniform')) {
+        //     display_products = true;
+        // }
+        // else if (tourism_management_checkbox.checked && category.includes('tm_uniform')) {
+        //     display_products = true;
+        // }
+        // else if (engineering_checkbox.checked && category.includes('engineering_uniform')) {
+        //     display_products = true;
+        // }
+        // else if (arts_and_sciences_checkbox.checked && category.includes('as_uniform')) {
+        //     display_products = true;
+        // }
+        // else if (male_checkbox.checked && category.includes('male_uniform')) {
+        //     display_products = true;
+        // }
+        // else if (female_checkbox.checked && category.includes('female_uniform')) {
+        //     display_products = true;
+        // }
+        // else if (unisex_checkbox.checked && category.includes('unisex_uniform')) {
+        //     display_products = true;
+        // }
+
+        // if (display_products) {
+        //     product.style.display = 'block';
+        // }
+        // else {
+        //     product.style.display = 'none';
+        // }
+
+        // let shsChecked = shs_checkbox.checked;
+        // let dailyUniformChecked = daily_uniform_checkbox.checked;
+
+        // let displayProductType1Version1 = (shs_checkbox.checked && category.includes('shs_uniform') && !daily_uniform_checkbox.checked) ||
+        //                      (daily_uniform_checkbox.checked && category.includes('daily_uniform') && !shs_checkbox.checked) ||
+        //                      (daily_uniform_checkbox.checked && category.includes('daily_uniform') && !male_checkbox.checked) ||
+        //                      (daily_uniform_checkbox.checked && category.includes('daily_uniform') && !female_checkbox.checked) ||
+        //                      (daily_uniform_checkbox.checked && category.includes('daily_uniform') && !unisex_checkbox.checked) ||
+        //                      (shs_checkbox.checked && daily_uniform_checkbox.checked && category.includes('shs_uniform') && category.includes('daily_uniform'));
+
+        // let displayProductType1Version1 = 
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && !daily_uniform_checkbox.checked && category.includes('daily_uniform') && !kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform')) ||
+        //     (daily_uniform_checkbox.checked && category.includes('daily_uniform') && !shs_checkbox.checked && category.includes('shs_uniform') && !kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform')) ||
+        //     (kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform') && !shs_checkbox.checked && category.includes('shs_uniform') && !daily_uniform_checkbox.checked && category.includes('daily_uniform')) ||
+        //     (male_checkbox.checked && category.includes('male_uniform') && !female_checkbox.checked && category.includes('female_uniform') && !unisex_checkbox.checked && category.includes('unisex_uniform') && !shs_checkbox.checked && category.includes('shs_uniform') && !daily_uniform_checkbox.checked && category.includes('daily_uniform') && !kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform')) ||
+        //     (female_checkbox.checked && category.includes('female_uniform') && !male_checkbox.checked && category.includes('male_uniform') && !unisex_checkbox.checked && category.includes('unisex_uniform') && !shs_checkbox.checked && category.includes('shs_uniform') && !daily_uniform_checkbox.checked && category.includes('daily_uniform') && !kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform')) ||
+        //     (unisex_checkbox.checked && category.includes('unisex_uniform') && !male_checkbox.checked && category.includes('male_uniform') && !female_checkbox.checked && category.includes('female_uniform') && !shs_checkbox.checked && category.includes('shs_uniform') && !daily_uniform_checkbox.checked && category.includes('daily_uniform') && !kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform')) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && daily_uniform_checkbox.checked && category.includes('daily_uniform')) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && daily_uniform_checkbox.checked && category.includes('daily_uniform') && male_checkbox.checked && category.includes('male_uniform')) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && daily_uniform_checkbox.checked && category.includes('daily_uniform') && female_checkbox.checked && category.includes('female_uniform')) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && daily_uniform_checkbox.checked && category.includes('daily_uniform') && unisex_checkbox.checked && category.includes('unisex_uniform')) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform')) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform') && unisex_checkbox.checked && category.includes('unisex_uniform'));
+
+        // let displayProductType1Version1 = 
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && !daily_uniform_checkbox.checked && !kitchen_uniform_checkbox.checked) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && !daily_uniform_checkbox.checked && !kitchen_uniform_checkbox.checked && !male_checkbox.checked) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && !daily_uniform_checkbox.checked && !kitchen_uniform_checkbox.checked && !female_checkbox.checked) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && !daily_uniform_checkbox.checked && !kitchen_uniform_checkbox.checked && !unisex_checkbox.checked) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && daily_uniform_checkbox.checked && category.includes('daily_uniform')) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && daily_uniform_checkbox.checked && category.includes('daily_uniform') && male_checkbox.checked && category.includes('male_uniform')) ||
+        //     (shs_checkbox.checked && category.includes('shs_uniform') && kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform'));
+        
+            // (shs_checkbox.checked && category.includes('shs_uniform') && ![daily_uniform_checkbox, kitchen_uniform_checkbox, food_and_beverages_uniform_checkbox].some(cb => cb.checked)) ||   
+            // (shs_checkbox.checked && category.includes('shs_uniform') && daily_uniform_checkbox.checked && category.includes('daily_uniform') && ![male_checkbox, female_checkbox, unisex_checkbox].some(cb => cb.checked)) ||
+            // (shs_checkbox.checked && category.includes('shs_uniform') && kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform') && ![male_checkbox, female_checkbox, unisex_checkbox].some(cb => cb.checked)) ||
+            // (shs_checkbox.checked && category.includes('shs_uniform') && daily_uniform_checkbox.checked && category.includes('daily_uniform') && male_checkbox.checked && category.includes('m_uniform') && !female_checkbox.checked && !category.includes('f_uniform') && !unisex_checkbox.checked && !category.includes('u_uniform')) ||
+            // (shs_checkbox.checked && category.includes('shs_uniform') && daily_uniform_checkbox.checked && category.includes('daily_uniform') && female_checkbox.checked && category.includes('f_uniform') && !male_checkbox.checked && !category.includes('m_uniform') && !unisex_checkbox.checked && !category.includes('u_uniform')) ||
+            // (shs_checkbox.checked && category.includes('shs_uniform') && daily_uniform_checkbox.checked && category.includes('daily_uniform') && unisex_checkbox.checked && category.includes('u_uniform') && !male_checkbox.checked && !category.includes('m_uniform') && !female_checkbox.checked && !category.includes('f_uniform')) || 
+            // (daily_uniform_checkbox.checked && category.includes('daily_uniform') && !kitchen_uniform_checkbox.checked && !category.includes('kitchen_uniform') && !food_and_beverages_uniform_checkbox.checked && !category.includes('food_and_beverages_uniform')) ||
+            // (kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform') && !daily_uniform_checkbox.checked && !category.includes('daily_uniform') && !food_and_beverages_uniform_checkbox.checked && !category.includes('food_and_beverages_uniform')) ||
+            // (food_and_beverages_uniform_checkbox.checked && category.includes('food_and_beverages_uniform') && !daily_uniform_checkbox.checked && !category.includes('daily_uniform') && !kitchen_uniform_checkbox.checked && !category.includes('kitchen_uniform')) ||
+            // (college_checkbox.checked && category.includes('college_uniform')) ||
+            // (male_checkbox.checked && category.includes('m_uniform') && !female_checkbox.checked && !category.includes('f_uniform') && !unisex_checkbox.checked && !category.includes('u_uniform'));
+
+        // let displayProductType1Version2 =
+        //     (daily_uniform_checkbox.checked && category.includes('daily_uniform'));
+            
+            
+        let shs_filter = shs_checkbox.checked && category.includes('shs_uniform');
+        let college_filter = college_checkbox.checked && category.includes('college_uniform');
+        let daily_uniform_filter = daily_uniform_checkbox.checked && category.includes('daily_uniform');
+        let kitchen_uniform_filter = kitchen_uniform_checkbox.checked && category.includes('kitchen_uniform');
+        let fnb_uniform_filter = food_and_beverages_uniform_checkbox.checked && category.includes('food_and_beverages_uniform');
+        let ict_filter = information_and_communications_technology_checkbox.checked && category.includes('ict_uniform');
+        let bm_filter = business_and_management_checkbox.checked && category.includes('bm_uniform');
+        let hm_filter = hospitality_management_checkbox.checked && category.includes('hm_uniform');
+        let tm_filter = tourism_management_checkbox.checked && category.includes('tm_uniform');
+        let eng_filter = engineering_checkbox.checked && category.includes('engineering_uniform');
+        let as_filer = arts_and_sciences_checkbox.checked && category.includes('as_uniform');
+        let male_filter = male_checkbox.checked && category.includes('lalake_uniform') ;
+        let female_filter = female_checkbox.checked && category.includes('babae_uniform');
+        let unisex_filter = unisex_checkbox.checked && category.includes('kahit_kanino_uniform');
+
+        let not_shs_filter = !shs_checkbox.checked && !category.includes('shs_uniform');
+        let not_college_filter = !college_checkbox.checked && !category.includes('college_uniform');
+        let not_daily_uniform_filter = !daily_uniform_checkbox.checked && !category.includes('daily_uniform');
+        let not_kitchen_uniform_filter = !kitchen_uniform_checkbox.checked && !category.includes('kitchen_uniform');
+        let not_fnb_uniform_filter = !food_and_beverages_uniform_checkbox.checked && !category.includes('food_and_beverages_uniform');
+        let not_ict_filter = !information_and_communications_technology_checkbox.checked && !category.includes('ict_uniform');
+        let not_bm_filter = !business_and_management_checkbox.checked && !category.includes('bm_uniform');
+        let not_hm_filter = !hospitality_management_checkbox.checked && !category.includes('hm_uniform');
+        let not_tm_filter = !tourism_management_checkbox.checked && !category.includes('tm_uniform');
+        let not_eng_filter = !engineering_checkbox.checked && !category.includes('engineering_uniform');
+        let not_as_filer = !arts_and_sciences_checkbox.checked && !category.includes('as_uniform');
+        let not_male_filter = !male_checkbox.checked;
+        let not_female_filter = !female_checkbox.checked;
+        let not_unisex_filter = !unisex_checkbox.checked;
+
+        if (shs_filter === true) {
+            product.style.display = 'block';
+        }   
+        else if (college_filter === true) {
+            product.style.display = 'block';
+        }
+        else if (daily_uniform_filter === true) {
+            product.style.display = 'block';
+        } 
+        else if (kitchen_uniform_filter === true) {
+            product.style.display = 'block';
+        }
+        else if (fnb_uniform_filter === true) {
+            product.style.display = 'block';
+        } 
+        else if (ict_filter === true) {
+            product.style.display = 'block';
+        }
+        else if (bm_filter === true) {
+            product.style.display = 'block';
+        } 
+        else if (hm_filter === true) {
+            product.style.display = 'block';
+        }
+        else if (tm_filter === true) {
+            product.style.display = 'block';
+        } 
+        else if (eng_filter === true) {
+            product.style.display = 'block';
+        }
+        else if (as_filer === true) {
+            product.style.display = 'block';
+        } 
+        else if (male_filter === true) {
+            product.style.display = 'block';
+        }
+        else if (female_filter === true) {
+            product.style.display = 'block';
+        } 
+        else if (unisex_filter === true) {
+            product.style.display = 'block';
+        }
+        else {
+            product.style.display = 'none';
+        }
+
+    });
+}
+
+function goUpButton() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' 
+    });
+}
 
 </script>
 
