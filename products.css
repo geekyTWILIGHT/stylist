@@ -40,7 +40,7 @@
 }
 
 .sidenav_n_content > .side_nav_bar {
-    position: sticky;
+    /* position: sticky; */
     display: flex;
     flex-direction: column;
     margin-left: 2%;
@@ -308,5 +308,15 @@
 .sidenav_n_content > .pages > .page_buttons > .page_button {
     width: 27.5%;
     height: 25%;
+}
+
+#up_button {
+    position: absolute;
+    right: 2%;
+    top: 210%;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    font-size: 16px;
     cursor: pointer;
 }
