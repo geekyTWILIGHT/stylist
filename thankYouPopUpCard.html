@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="thankYouPopUpCard.css">
+    <title>Thank You</title>
+</head>
+<body>
+    
+    <button class="pay-now-btn" id="pay_now_btn" onclick="openGratitudeForm()">Pay Now</button>
+
+    <div class="gratitude-form-overlay" id="gratitude_form_overlay">
+        <div class="gratitude-form">
+            <header class="form-header">
+                <a class="website-name">The Stylist</a>
+                <span class="close-btn" onclick="closeGratitudeForm()">x</span>
+            </header>
+            <main class="form-contents">
+                <div class="thanks-title">
+                    <h3 class="thanks">Thank you for purchasing</h3>
+                </div>
+                <div class="main-content">
+                    <p class="content">
+                        Your transaction has been successfully processed. 
+                        Kindly prepare the total amount of <span class="money">₱000.00</span> for payment 
+                        on or before <span class="delivery_date"> MM/DD/YY</span>. Thank you for choosing our service!
+                    </p>
+                </div>
+            </main>
+            <footer class="form-footer">
+                <p class="terms">
+                    Keep this receipt for reference. Contact support for assistance with any issues.
+                </p>
+                <div class="purchase-date">
+                    <p class="date">
+                        <span class="rough">MM/DD/YY</span>
+                        <span class="exact">HH:SS</span>
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+<script>
+     function openGratitudeForm() {
+    var openGratBtn = document.getElementById('pay_now_btn');
+    if (!openGratBtn.disabled) {
+      document.getElementById('gratitude_form_overlay').style.display = 'flex';
+      openGratBtn.disabled = true;
+    }
+  }
+
+    function closeGratitudeForm() {
+        document.getElementById('gratitude_form_overlay').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>

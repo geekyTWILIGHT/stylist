@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="informationPage.css">
+    <title>1st Phase - Information</title>
+</head>
+<body>
+    
+    <div class="checkout_page_content">
+        <div class="main">
+            <div class="main_contents">
+                <header class="main_header">
+                    <a class="website_name">
+                        <span class="website_name_text">The Stylist</span>
+                    </a>
+                    <nav class="progress">
+                        <ol class="progress_list">
+                            <li class="progress_names" id="information_phase">
+                                <span class="progress_name" title="Currently in" onclick="window.location.href='informationPage.html'">Information</span>
+                                <div class="next_progress_container">
+                                    <span class="next_progress">&gt;</span>
+                                </div>
+                            </li>
+                            <li class="progress_names" id="shipping_phase">
+                                <span class="progress_name">Shipping</span>
+                                <div class="next_progress_container">
+                                    <span class="next_progress">&gt;</span>
+                                </div>
+                            </li>
+                            <li class="progress_names" id="payment_phase">
+                                <span class="progress_name">Payment</span>
+                            </li>
+                        </ol>
+                    </nav>
+                </header>
+                <main class="main_content">
+                    <form class="form_fillup">
+                        <div class="contact_info">
+                            <div class="contact_header">
+                                <div class="contact_header_content">
+                                    <p class="contact_title">Contact</p>
+                                </div>
+                                <div class="account_login">
+                                    <p class="log_in_account">
+                                        <span class="ask">Have an account?</span>
+                                        <a class="login_btn">Log in</a>
+                                    </p>
+                                </div>
+                            </div>
+                            <input class="email_input" type="email" placeholder="Email">
+                            <div class="update_the_user">
+                                <button class="update_option" id="update_through_email">
+                                    <svg class="check_answer" id="button_icon" width="15" height="15">
+                                        <rect width="15" height="15"></rect>
+                                    </svg>
+                                    <span class="update_do">Email me with news and offers</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="shipping_address_header">
+                            <h3 class="shipping_address_title">Shipping Address</h3>
+                        </div>
+                        <div class="real_name_fields">
+                            <input class="first_name" type="text" placeholder="First name">
+                            <input class="last_name" type="text" placeholder="Last name">
+                        </div>
+                        <input class="address" type="text" placeholder="Address">
+                        <div class="detailed_address">
+                            <input class="postcode" type="text" placeholder="Postcode">
+                            <input class="apartment_etc_address_optional" type="text" placeholder="Apartment, suite, etc. (optional)">
+                        </div>
+                        <div class="phone_num">
+                            <input class="phone_num_optional" type="tel" placeholder="Phone (optional)">
+                            <div class="why_phone_num">
+                                <div class="question_icon_bg">
+                                    <p class="question_icon" title="In case we need to contact you about your order"> ? </p>
+                                    <!-- <img class="question_icon" title="In case we need to contact you about your order"> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="continue_to_shipping">
+                            <div class="shipping_phase_btn">
+                                <button class="ship_btn">Continue to shippping</button>
+                            </div>
+                        </div>
+                    </form>
+                </main>
+                <footer class="main_footer">
+                    <nav class="footer_list">
+                            <a class="footer_link" id="refund_policy">Refund Policy</a>
+                            <a class="footer_link" id="privacy_policy">Privacy Policy</a>
+                            <a class="footer_link" id="terms">Terms of service</a>
+                    </nav>
+                </footer>
+            </div>
+        </div>
+        <aside class="order">
+            <div class="order_contents">
+                <div class="ordered_products">
+                    <div class="products">
+                        <div class="product_bg">
+                            <img class="product_image" alt="ordered product">
+                        </div>
+                        <div class="product_info">
+                            <div class="product_details_container">
+                                <a class="product_details" id="product_name">Product Name</a>
+                                <p class="product_details" id="product_quantity">Qty. 0</p>
+                                <p class="product_details" id="product_size">M</p>
+                            </div>
+                        </div>
+                        <div class="price_container">
+                            <div class="product_price">
+                                <p class="price">₱000.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more products as wanted -->
+                </div>
+                <div class="subtotal_calculation">
+                    <div class="subtotal">
+                        <div class="raw_price_info">
+                            <p class="raw_price" id="raw_price_text">Subtotal</p>
+                            <p class="raw_price" id="final_raw_price">₱000.00</p>
+                        </div>
+                        <div class="shipping_fee_info">
+                            <p class="shipping_fee" id="shipping_title">Shipping</p>
+                            <p class="shipping_fee" id="shipping_fee_price">Calculated at next step</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="final_price">
+                    <div class="outcome">
+                        <div class="total_title">
+                            <p class="total_text">Total</p>
+                        </div>
+                        <div class="total_price">
+                            <span class="money" id="currency">PHP</span>
+                            <span class="money" id="total">₱000.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+</html>
