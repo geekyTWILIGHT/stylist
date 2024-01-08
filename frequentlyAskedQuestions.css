@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    color: #333;
+}
+
+html {
+    background-image: linear-gradient(#fff, #F5F5F5, #fff, #F5F5F5);
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    min-height: 50vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+.frequently-asked-questions {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh 0;
+    margin-top: 10vh;
+}
+
+.frequently-asked-questions > .title-container {
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frequently-asked-questions > .title-container > .title {
+    font-size: 24px;
+    color: #8c8c8e;
+}
+
+.frequently-asked-questions > .frequently-asked-questions-contents {       
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh 0;
+}
+
+.frequently-asked-questions > .frequently-asked-questions-contents > .content {
+    width: 71.5%;
+    min-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+} 
+
+.frequently-asked-questions > .frequently-asked-questions-contents > .content > .content-title {
+    width: 97%;
+    height: 7.5vh;
+    display: flex;
+    flex-direction: initial;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+}
+
+.frequently-asked-questions > .frequently-asked-questions-contents > .content > .content-title > .title {
+    font-size: 20px;
+    color: #22242a;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.frequently-asked-questions > .frequently-asked-questions-contents > .content >  .content-info {
+    width: 97%;
+    min-height: 1vh;
+    display: none;
+    padding-bottom: 3vh;
+    line-height: 1.2;
+}
+
+.frequently-asked-questions > .frequently-asked-questions-contents > .content >  .content-info > li {
+    font-size: 14px;
+    color: #8c8c8e;
+}
+
+.frequently-asked-questions > .last-updated {
+    width: 69.5%;
+    height: auto;
+    display: flex;
+    flex-direction: initial;
+    justify-content: right;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.frequently-asked-questions > .last-updated > .date {
+    font-size: 12px;
+    color: #8c8c8e;
+}
